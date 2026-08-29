@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       <section className="about" id="about">
-        <figure><img src="/portfolio/thiago-about.avif" alt="Thiago Biagi" loading="lazy" /></figure>
+        <figure><img src="/portfolio/thiago-portrait-2026.jpg" alt="Thiago Biagi em retrato recente" loading="lazy" /></figure>
         <div className="about-copy">
           <p className="eyebrow">Thiago Biagi / About</p>
           <h2>Fashion editor e creative consultant brasileiro, formado em jornalismo e fascinado pela liberdade criativa das décadas de 70 e 80.</h2>
