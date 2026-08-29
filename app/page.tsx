@@ -1,10 +1,10 @@
 const projects = [
-  { number: '01', title: 'Editorial', subtitle: 'Fashion stories', image: '/portfolio/e391254f4b6ce102.jpg', alt: 'Editorial com Marcela Fetter' },
-  { number: '02', title: 'Celebrities', subtitle: 'Portraits & appearances', image: '/portfolio/9efc17a7fad74256.jpg', alt: 'Xênia França em produção para o Latin Grammy' },
-  { number: '03', title: 'Magazine', subtitle: 'Print & digital', image: '/portfolio/d9309bc460f95a72.jpg', alt: 'Editorial para Victor Magazine Men' },
-  { number: '04', title: 'Gallery', subtitle: 'Selected styling', image: '/portfolio/1f3c396b1d80843a.jpg', alt: 'Izabel Goulart em editorial de moda' },
-  { number: '05', title: 'Diego Miguel', subtitle: 'Fashion editorial', image: '/portfolio/a649776885d16b65.jpg', alt: 'Diego Miguel em editorial de moda' },
-  { number: '06', title: 'Archive', subtitle: 'Thiago Biagi style', image: '/portfolio/011a9b1f61d3e823.jpg', alt: 'Trabalho selecionado de styling de Thiago Biagi' },
+  { number: '01', title: 'Wagner Moura', subtitle: 'GQ Brasil · Bob Wolfenson · Dior', image: '/portfolio/wagner-gq.jpg', alt: 'Wagner Moura para GQ Brasil', href: 'https://www.instagram.com/thiagobiagi/p/DRevkVQjt6l/', note: 'Golden Globe winner · Oscar nominee' },
+  { number: '02', title: 'Kaká', subtitle: 'GQ Brasil · Franco Amendola', image: '/portfolio/kaka-gq.jpg', alt: 'Kaká para GQ Brasil', href: 'https://www.instagram.com/thiagobiagi/p/DYFSITtDuPU/', note: 'Cover story' },
+  { number: '03', title: 'Chay Suede', subtitle: 'Celebrity styling · Prada · Hermès', image: '/portfolio/chay-suede.jpg', alt: 'Chay Suede com styling de Thiago Biagi', href: 'https://www.instagram.com/thiagobiagi/p/Db_cJNJlq5u/', note: 'Styling' },
+  { number: '04', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme com styling de Thiago Biagi', href: 'https://www.instagram.com/thiagobiagi/p/DbboPrpls1V/', note: 'Celebrity styling' },
+  { number: '05', title: 'Editorial', subtitle: 'Fashion stories · Archive', image: '/portfolio/e391254f4b6ce102.jpg', alt: 'Editorial com Marcela Fetter', href: 'https://www.thiagobiagi.com/galeria-1', note: 'Selected archive' },
+  { number: '06', title: 'Magazine', subtitle: 'Print & digital · Archive', image: '/portfolio/d9309bc460f95a72.jpg', alt: 'Editorial para Victor Magazine Men', href: 'https://www.thiagobiagi.com/magazine', note: 'Selected archive' },
 ];
 
 export default function Home() {
@@ -20,13 +20,13 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="kicker">Stylist · São Paulo</p>
+          <p className="kicker">Fashion Editor · Creative Consultant · Brazil</p>
           <h1><span>Thiago</span><span>Biagi</span></h1>
           <div className="hero-note"><span>Fashion</span><span>Culture</span><span>Image</span></div>
         </div>
         <figure className="hero-image">
-          <img src="/portfolio/e391254f4b6ce102.jpg" alt="Editorial de moda com styling de Thiago Biagi" />
-          <figcaption>Selected work / Portfolio</figcaption>
+          <img src="/portfolio/wagner-gq.jpg" alt="Wagner Moura para GQ Brasil" />
+          <figcaption>Wagner Moura / GQ Brasil</figcaption>
         </figure>
         <a className="scroll" href="#work">Explore ↓</a>
       </section>
@@ -44,7 +44,7 @@ export default function Home() {
               <div className="project-image"><img src={project.image} alt={project.alt} loading="lazy" /></div>
               <div className="project-meta">
                 <span>{project.number}</span>
-                <div><h3>{project.title}</h3><p>{project.subtitle}</p></div>
+                <div><h3><a href={project.href} target="_blank" rel="noreferrer">{project.title} ↗</a></h3><p>{project.subtitle}</p><span className="project-note">{project.note}</span></div>
               </div>
             </article>
           ))}
@@ -55,7 +55,7 @@ export default function Home() {
         <figure><img src="/portfolio/thiago-about.avif" alt="Thiago Biagi" loading="lazy" /></figure>
         <div className="about-copy">
           <p className="eyebrow">Thiago Biagi / About</p>
-          <h2>Stylist brasileiro, formado em jornalismo e fascinado pela liberdade criativa das décadas de 70 e 80.</h2>
+          <h2>Fashion editor e creative consultant brasileiro, formado em jornalismo e fascinado pela liberdade criativa das décadas de 70 e 80.</h2>
           <div className="about-text">
             <p>Sua trajetória foi construída ao lado de importantes editores de moda do Brasil, entre eles Renata Correa, Pedro Sales e Flavia Lafer.</p>
             <p>Em seu trabalho, Thiago combina diferentes momentos, estampas, texturas e cores — atravessando referências masculinas e femininas sem limitar a imagem por gênero.</p>
@@ -68,9 +68,9 @@ export default function Home() {
         <p className="eyebrow">Bookings / Contact</p>
         <h2>Let’s make<br /><em>an image.</em></h2>
         <div className="contact-row">
-          <a href="mailto:thiago.biagi1@gmail.com">thiago.biagi1@gmail.com ↗</a>
+          <a href="mailto:thiago.biagi@onyn.com.br">thiago.biagi@onyn.com.br ↗</a>
           <a href="https://www.instagram.com/thiagobiagi/" target="_blank" rel="noreferrer">@thiagobiagi ↗</a>
-          <p>São Paulo, Brasil</p>
+          <p>Beltrame Management<br />São Paulo, Brasil</p>
         </div>
       </section>
 

@@ -3,8 +3,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Thiago Biagi — Stylist',
-  description: 'Portfolio de Thiago Biagi, stylist brasileiro.',
-  openGraph: { title: 'Thiago Biagi — Stylist', description: 'Fashion as attitude. Image as narrative.', type: 'website' },
+  description: 'Portfolio de Thiago Biagi, fashion editor e creative consultant brasileiro.',
+  openGraph: { title: 'Thiago Biagi — Fashion Editor', description: 'Fashion as attitude. Image as narrative.', type: 'website' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
