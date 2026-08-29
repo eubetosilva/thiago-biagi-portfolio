@@ -21,7 +21,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="kicker">Fashion Editor · Creative Consultant · Brazil</p>
-          <h1><span>Thiago</span><span>Biagi</span></h1>
+          <h1 className="hero-title"><span>Thiago</span><span className="biagi-line">B<span className="bridge-i">i</span>agi</span></h1>
           <div className="hero-note"><span>Fashion</span><span>Culture</span><span>Image</span></div>
         </div>
         <figure className="hero-image">
