@@ -18,6 +18,28 @@ const reels = [
   { id: 'DNY97QMOqxg', title: 'Jhona Burjack', subtitle: 'Fucking Young · Behind the scenes' },
 ];
 
+const stories = [
+  { id: 'DaLj07okQzG', title: 'P.Andrade — Sagrado', subtitle: 'Editorial diary · Paris' },
+  { id: 'DZ-lU2Ykb2y', title: 'Borsoi', subtitle: 'Dior · Paris' },
+  { id: 'DaFoxHzDgcW', title: 'Julio Reis', subtitle: 'Dior · Paris' },
+  { id: 'DZph41KDV7E', title: 'Numero Netherlands', subtitle: 'Final chapter' },
+  { id: 'DZmw4wpDvbq', title: 'Numero Netherlands', subtitle: 'Editorial story' },
+  { id: 'DY2xr0ill6J', title: 'Agnes Nunes', subtitle: 'Mondepars' },
+  { id: 'DYo9UZ9DtvW', title: 'Kaká', subtitle: 'GQ Brasil · Cover story' },
+  { id: 'DYR14jrDpyG', title: 'Pedro Novaes', subtitle: 'Bazaar Brasil · Dior' },
+  { id: 'DYHpOjYDr7h', title: 'Yeux Papillon', subtitle: 'JW Anderson · NK Store' },
+  { id: 'DYCTpIsDqzV', title: 'João Guilherme', subtitle: 'O Rei da Internet · Comme des Garçons' },
+  { id: 'DRxgP3EkVBp', title: 'Wagner Moura', subtitle: 'GQ Brasil · MOTY 2025' },
+  { id: 'DUeVbTGDiOI', title: 'Yeux Papillon', subtitle: 'Victoria Beckham · NK Store' },
+  { id: 'DXLC3aDjhLI', title: 'João Guilherme', subtitle: 'Gucci · Miami Film Festival' },
+  { id: 'DMSz7NZOG1j', title: 'Rodrigo Santoro', subtitle: 'Wimbledon · Zegna · Dunhill' },
+  { id: 'DVWtvdYEZ91', title: 'Pinheiro', subtitle: 'Mondepars · Brazil' },
+  { id: 'DGLSVrFOh0w', title: 'Neiva Laura', subtitle: 'Archive · Styled by Thiago Biagi' },
+  { id: 'DR5fqOlDvfY', title: 'Borsoi', subtitle: 'Bottega Veneta · Oscar Niemeyer' },
+  { id: 'DQAhRq5Dj04', title: 'Agnes Nunes', subtitle: 'Halloween Sephora' },
+  { id: 'DQC2um9jhKx', title: 'It Gaspar', subtitle: 'Light test · Studio life' },
+];
+
 export default function Home() {
   return (
     <main>
@@ -63,6 +85,22 @@ export default function Home() {
                 <iframe src={`https://www.instagram.com/reel/${reel.id}/embed/`} title={`${reel.title} — ${reel.subtitle}`} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
               </div>
               <div className="reel-meta"><span>0{index + 1}</span><div><h3>{reel.title}</h3><p>{reel.subtitle}</p><a href={`https://www.instagram.com/reel/${reel.id}/`} target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="editorial-diary" aria-label="Diário editorial em Paris">
+        <div className="diary-copy">
+          <p className="eyebrow">Editorial stories / Selected</p>
+          <h2>Behind<br /><em>the vision.</em></h2>
+          <p>Campanhas, editoriais e diários visuais apresentados em seus carrosséis originais.</p>
+        </div>
+        <div className="story-grid">
+          {stories.map((story, index) => (
+            <article className="story-card" key={story.id}>
+              <div className="post-frame"><iframe src={`https://www.instagram.com/p/${story.id}/embed/`} title={`${story.title} — ${story.subtitle}`} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" /></div>
+              <div className="story-meta"><span>0{index + 1}</span><div><h3>{story.title}</h3><p>{story.subtitle}</p><a href={`https://www.instagram.com/p/${story.id}/`} target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
             </article>
           ))}
         </div>
