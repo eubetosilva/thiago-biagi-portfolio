@@ -38,6 +38,21 @@ export default function Home() {
         <h2>Fashion as attitude.<br /><em>Image as narrative.</em></h2>
       </section>
 
+      <section className="motion" aria-label="Fashion film">
+        <div className="section-heading"><p>Motion / Fashion film</p><span>01</span></div>
+        <div className="motion-layout">
+          <div className="motion-copy">
+            <p className="eyebrow">Chay Suede / Brioni / Cartier</p>
+            <h2>Style<br /><em>in motion.</em></h2>
+            <p>Fashion film com styling de Thiago Biagi, apresentado diretamente do perfil oficial no Instagram.</p>
+            <a className="text-link" href="https://www.instagram.com/reel/Db0nUrmuKC-/" target="_blank" rel="noreferrer">Assistir no Instagram ↗</a>
+          </div>
+          <div className="reel-frame">
+            <iframe src="https://www.instagram.com/reel/Db0nUrmuKC-/embed/" title="Chay Suede com styling de Thiago Biagi" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
+          </div>
+        </div>
+      </section>
+
       <section className="work" id="work">
         <div className="section-heading"><p>Selected work</p><span>01 — 06</span></div>
         <div className="project-grid">
