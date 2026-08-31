@@ -7,6 +7,17 @@ const projects = [
   { number: '06', title: 'Magazine', subtitle: 'Print & digital · Archive', image: '/portfolio/d9309bc460f95a72.jpg', alt: 'Editorial para Victor Magazine Men', href: 'https://www.thiagobiagi.com/magazine', note: 'Selected archive' },
 ];
 
+const reels = [
+  { id: 'Db0nUrmuKC-', title: 'Chay Suede', subtitle: 'Brioni · Cartier' },
+  { id: 'DbOUSBKu6LA', title: 'Marcello & Pedro Novaes', subtitle: 'Democrata · BTS' },
+  { id: 'DaNiK5JIWu_', title: 'P.Andrade — Sagrado', subtitle: 'SS27 · Paris Fashion Week' },
+  { id: 'DZn3Tv6glDK', title: 'Numero Netherlands', subtitle: 'Fashion film' },
+  { id: 'DYPPqFGuKx3', title: 'Kaká', subtitle: 'GQ Brasil · Cover story' },
+  { id: 'DXzx-KjxwrN', title: 'Pedro Novaes', subtitle: 'Bazaar Brasil · Cover story' },
+  { id: 'DRicB_WDh5I', title: 'Wagner Moura', subtitle: 'GQ Brasil · MOTY 2025' },
+  { id: 'DNY97QMOqxg', title: 'Jhona Burjack', subtitle: 'Fucking Young · Behind the scenes' },
+];
+
 export default function Home() {
   return (
     <main>
@@ -39,17 +50,21 @@ export default function Home() {
       </section>
 
       <section className="motion" aria-label="Fashion film">
-        <div className="section-heading"><p>Motion / Fashion film</p><span>01</span></div>
-        <div className="motion-layout">
-          <div className="motion-copy">
-            <p className="eyebrow">Chay Suede / Brioni / Cartier</p>
-            <h2>Style<br /><em>in motion.</em></h2>
-            <p>Fashion film com styling de Thiago Biagi, apresentado diretamente do perfil oficial no Instagram.</p>
-            <a className="text-link" href="https://www.instagram.com/reel/Db0nUrmuKC-/" target="_blank" rel="noreferrer">Assistir no Instagram ↗</a>
-          </div>
-          <div className="reel-frame">
-            <iframe src="https://www.instagram.com/reel/Db0nUrmuKC-/embed/" title="Chay Suede com styling de Thiago Biagi" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
-          </div>
+        <div className="section-heading"><p>Motion / Fashion films</p><span>01 — 08</span></div>
+        <div className="motion-copy">
+          <p className="eyebrow">Selected moving image</p>
+          <h2>Style<br /><em>in motion.</em></h2>
+          <p>Uma seleção de bastidores, campanhas e editoriais em movimento, apresentada diretamente dos posts originais.</p>
+        </div>
+        <div className="reel-grid">
+          {reels.map((reel, index) => (
+            <article className="reel-card" key={reel.id}>
+              <div className="reel-frame">
+                <iframe src={`https://www.instagram.com/reel/${reel.id}/embed/`} title={`${reel.title} — ${reel.subtitle}`} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
+              </div>
+              <div className="reel-meta"><span>0{index + 1}</span><div><h3>{reel.title}</h3><p>{reel.subtitle}</p><a href={`https://www.instagram.com/reel/${reel.id}/`} target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
+            </article>
+          ))}
         </div>
       </section>
 
