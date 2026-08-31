@@ -19,3 +19,34 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 @media (max-width:760px) { .site-header { grid-template-columns:1fr auto; } nav { display:none; } .hero { min-height:auto; padding:22px 18px 80px; grid-template-columns:1fr; } .hero-copy { min-height:47vh; } .hero h1 { font-size:26vw; line-height:.76; } .hero h1 span:last-child { margin-left:4vw; } .hero-image { height:66vh; } .scroll { left:auto; right:18px; bottom:42px; transform:none; } .intro { padding:28vw 18px; } .intro h2 em { margin-left:0; } .work { padding:24vw 18px; } .project-grid { grid-template-columns:1fr; gap:20vw; margin-top:9vw; } .project-card:nth-child(even) { margin-top:0; } .about { grid-template-columns:1fr; gap:14vw; padding:18px 18px 22vw; } .about figure { min-height:0; height:75vh; } .about-copy { padding:0; } .about h2 { font-size:12vw; margin:14vw 0 10vw; } .about-text { grid-template-columns:1fr; font-size:13px; } .text-link { margin-top:14vw; } .contact { min-height:72vh; padding:24vw 18px 6vw; } .contact h2 { font-size:20vw; line-height:.85; } .contact h2 em { margin-left:0; } .contact-row { grid-template-columns:1fr; gap:18px; } .contact-row p { text-align:left; } footer { padding-inline:18px; flex-direction:column; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .project-image img { transition:none; } .hero-slide { animation:none; opacity:0; } .hero-slide:first-child { opacity:1; } }
 @media (max-width:760px) { .hero h1 > span:last-child { margin-left:4vw; margin-top:.08em; } }
+
+/* Full-screen editorial campaign hero */
+.site-header { position:absolute; top:0; left:0; width:100%; height:76px; z-index:30; color:#fff; background:transparent; border-bottom:1px solid rgba(255,255,255,.34); backdrop-filter:none; }
+.hero { min-height:100vh; padding:0; display:block; position:relative; color:#fff; background:#121212; isolation:isolate; }
+.hero::after { content:""; position:absolute; inset:0; z-index:2; pointer-events:none; background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.06) 34%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.58) 100%); }
+.hero-image { position:absolute; inset:0; width:100%; height:100%; margin:0; overflow:hidden; background:#151515; }
+.hero-slide { position:absolute; inset:0; overflow:hidden; }
+.hero-slide .slide-backdrop { position:absolute; inset:-4%; width:108%; height:108%; object-fit:cover; object-position:center; filter:blur(18px) brightness(.63) saturate(.75); transform:scale(1.08); }
+.hero-slide .slide-subject { position:absolute; inset:0; z-index:1; width:100%; height:100%; object-fit:contain; object-position:center; filter:saturate(.9) contrast(1.02); }
+.hero-slide span { z-index:3; left:auto; right:2.7vw; bottom:2.7vw; text-align:right; color:#fff; }
+.hero-copy { position:absolute; inset:0; z-index:4; padding:108px 2.7vw 2.7vw; display:flex; flex-direction:column; justify-content:flex-start; pointer-events:none; }
+.hero .kicker { color:#fff; text-shadow:0 1px 16px rgba(0,0,0,.45); }
+.hero h1 { margin:auto 0 2.4vh; max-width:90vw; color:#fff; font-size:clamp(82px,12.2vw,188px); line-height:.8; letter-spacing:-.075em; text-shadow:0 2px 28px rgba(0,0,0,.22); }
+.hero h1 > span:last-child { margin-left:10vw; margin-top:.12em; }
+.hero-note { padding-bottom:0; }
+.hero-note span { color:#fff; border-color:rgba(255,255,255,.72); background:rgba(0,0,0,.08); backdrop-filter:blur(6px); }
+.scroll { left:auto; right:2.7vw; bottom:5.3vw; transform:none; z-index:6; color:#10100f; }
+
+@media (max-width:760px) {
+  .site-header { height:68px; padding:0 18px; }
+  .hero { min-height:100svh; padding:0; }
+  .hero-copy { min-height:0; padding:90px 18px 22px; }
+  .hero h1 { margin:auto 0 17vh; font-size:23vw; line-height:.8; max-width:96vw; }
+  .hero h1 > span:last-child { margin-left:8vw; margin-top:.12em; }
+  .hero-image { height:100%; }
+  .hero-slide .slide-backdrop { inset:-6%; width:112%; height:112%; filter:blur(14px) brightness(.58) saturate(.72); }
+  .hero-slide .slide-subject { object-fit:contain; object-position:center; }
+  .hero-slide span { left:18px; right:auto; bottom:22px; text-align:left; }
+  .hero-note { display:none; }
+  .scroll { right:18px; bottom:18px; width:68px; height:68px; }
+}
