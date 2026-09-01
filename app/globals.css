@@ -125,6 +125,36 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .post-frame iframe { height:680px; }
 }
 
+/* Editorial magazine cover */
+.hero { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr); min-height:100vh; padding:82px 0 0; background:#ece9e0; color:#111; }
+.cover-photo { position:relative; min-height:calc(100vh - 82px); overflow:hidden; }
+.cover-photo img { object-position:center 24%; }
+.cover-photo > span { position:absolute; left:22px; bottom:20px; color:#fff; font-size:9px; text-transform:uppercase; letter-spacing:.14em; text-shadow:0 1px 12px rgba(0,0,0,.55); }
+.cover-story { min-height:calc(100vh - 82px); padding:24px 2.5vw 2.2vw; display:flex; flex-direction:column; border-left:1px solid rgba(16,16,15,.18); }
+.issue-line { display:flex; justify-content:space-between; padding-bottom:12px; border-bottom:1px solid rgba(16,16,15,.45); font-size:8px; text-transform:uppercase; letter-spacing:.16em; }
+.cover-title { margin:auto 0; }
+.cover-title > p { margin:0 0 3vh; max-width:260px; font-size:10px; line-height:1.45; text-transform:uppercase; letter-spacing:.16em; }
+.cover-title h1 { display:block; margin:0; max-width:none; color:#111; font-family:Georgia,'Times New Roman',serif; font-size:clamp(76px,8.6vw,138px); font-weight:400; line-height:.72; letter-spacing:-.075em; text-transform:none; text-shadow:none; }
+.cover-title h1 em { margin-left:1.1em; font-weight:400; }
+.cover-footer { display:grid; grid-template-columns:.65fr 1.35fr; gap:2vw; align-items:end; border-top:1px solid rgba(16,16,15,.45); padding-top:14px; }
+.cover-footer > div span,.cover-footer > div p,.cover-footer figcaption { font-size:8px; text-transform:uppercase; letter-spacing:.13em; }
+.cover-footer > div span { font-weight:700; }
+.cover-footer > div p { margin:12px 0 0; line-height:1.8; }
+.cover-footer figure { margin:0; }
+.cover-footer figure img { height:22vh; min-height:150px; object-position:center 30%; }
+.cover-footer figcaption { margin-top:7px; }
+
+@media (max-width:760px) {
+  .hero { grid-template-columns:1fr; grid-template-rows:58svh auto; min-height:100svh; padding-top:68px; }
+  .cover-photo { min-height:0; }
+  .cover-story { min-height:auto; padding:18px 16px 28px; border-left:0; }
+  .cover-title { margin:14vw 0 16vw; }
+  .cover-title > p { margin-bottom:8vw; }
+  .cover-title h1 { font-size:22vw; line-height:.73; }
+  .cover-footer { grid-template-columns:1fr 1.15fr; gap:18px; }
+  .cover-footer figure img { height:28vh; min-height:0; }
+}
+
 /* Minimal campaign opening inspired by contemporary French fashion houses */
 .site-header { position:absolute; height:82px; padding:0 2.2vw; color:#111; background:#fff; border:0; }
 .wordmark { font-size:18px; font-weight:900; letter-spacing:-.025em; }
@@ -153,4 +183,11 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .hero-panel span { left:14px; bottom:12px; font-size:8px; }
   .hero-panel-right span { bottom:58px; }
   .hero-link { align-self:flex-end; margin:0 0 2px; }
+}
+
+/* Final magazine-spread overrides */
+.hero { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr); padding:82px 0 0; background:#ece9e0; }
+.cover-title h1 { display:block; }
+@media (max-width:760px) {
+  .hero { grid-template-columns:1fr; grid-template-rows:58svh auto; padding-top:68px; }
 }

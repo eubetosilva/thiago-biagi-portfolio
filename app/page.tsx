@@ -23,15 +23,15 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="kicker">Fashion Editor · Creative Consultant · São Paulo</p>
-          <h1><span>Thiago Biagi</span></h1>
-          <a href="#work" className="hero-link">View selected work ↓</a>
+        <div className="cover-photo"><img src="/portfolio/instagram/numero-editorial.jpg" alt="Editorial de moda para Numéro Netherlands" /><span>Numéro Netherlands / Editorial</span></div>
+        <div className="cover-story">
+          <div className="issue-line"><span>Portfolio No. 01</span><span>São Paulo · 2026</span></div>
+          <div className="cover-title"><p>Fashion editor<br />&amp; creative consultant</p><h1>Thiago<br /><em>Biagi</em></h1></div>
+          <div className="cover-footer">
+            <div><span>Inside</span><p>Celebrity styling<br />Editorial stories<br />Magazine covers</p></div>
+            <figure><img src="/portfolio/instagram/borsoi-dior.jpg" alt="Editorial masculino com styling de Thiago Biagi" /><figcaption>Dior / Styling</figcaption></figure>
+          </div>
         </div>
-        <figure className="hero-image">
-          <div className="hero-panel hero-panel-left"><img src="/portfolio/instagram/numero-editorial.jpg" alt="Editorial de moda para Numéro Netherlands" /><span>Numéro Netherlands / Editorial</span></div>
-          <div className="hero-panel hero-panel-right"><img src="/portfolio/instagram/borsoi-dior.jpg" alt="Editorial masculino com styling de Thiago Biagi" /><span>Dior / Styling</span></div>
-        </figure>
       </section>
 
       <section className="image-wall" aria-label="Galeria editorial">
