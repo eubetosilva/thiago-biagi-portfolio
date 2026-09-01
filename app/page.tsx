@@ -7,39 +7,14 @@ const projects = [
   { number: '06', title: 'Magazine', subtitle: 'Print & digital · Archive', image: '/portfolio/d9309bc460f95a72.jpg', alt: 'Editorial para Victor Magazine Men', href: 'https://www.thiagobiagi.com/magazine', note: 'Selected archive' },
 ];
 
-const reels = [
-  { id: 'Db0nUrmuKC-', title: 'Chay Suede', subtitle: 'Brioni · Cartier' },
-  { id: 'DbOUSBKu6LA', title: 'Marcello & Pedro Novaes', subtitle: 'Democrata · BTS' },
-  { id: 'DaNiK5JIWu_', title: 'P.Andrade — Sagrado', subtitle: 'SS27 · Paris Fashion Week' },
-  { id: 'DZn3Tv6glDK', title: 'Numero Netherlands', subtitle: 'Fashion film' },
-  { id: 'DYPPqFGuKx3', title: 'Kaká', subtitle: 'GQ Brasil · Cover story' },
-  { id: 'DXzx-KjxwrN', title: 'Pedro Novaes', subtitle: 'Bazaar Brasil · Cover story' },
-  { id: 'DRicB_WDh5I', title: 'Wagner Moura', subtitle: 'GQ Brasil · MOTY 2025' },
-  { id: 'DNY97QMOqxg', title: 'Jhona Burjack', subtitle: 'Fucking Young · Behind the scenes' },
-];
-
-const stories = [
-  { id: 'DaLj07okQzG', title: 'P.Andrade — Sagrado', subtitle: 'Editorial diary · Paris' },
-  { id: 'DZ-lU2Ykb2y', title: 'Borsoi', subtitle: 'Dior · Paris' },
-  { id: 'DaFoxHzDgcW', title: 'Julio Reis', subtitle: 'Dior · Paris' },
-  { id: 'DZph41KDV7E', title: 'Numero Netherlands', subtitle: 'Final chapter' },
-  { id: 'DZmw4wpDvbq', title: 'Numero Netherlands', subtitle: 'Editorial story' },
-  { id: 'DY2xr0ill6J', title: 'Agnes Nunes', subtitle: 'Mondepars' },
-  { id: 'DYo9UZ9DtvW', title: 'Kaká', subtitle: 'GQ Brasil · Cover story' },
-  { id: 'DYR14jrDpyG', title: 'Pedro Novaes', subtitle: 'Bazaar Brasil · Dior' },
-  { id: 'DYHpOjYDr7h', title: 'Yeux Papillon', subtitle: 'JW Anderson · NK Store' },
-  { id: 'DYCTpIsDqzV', title: 'João Guilherme', subtitle: 'O Rei da Internet · Comme des Garçons' },
-  { id: 'DRxgP3EkVBp', title: 'Wagner Moura', subtitle: 'GQ Brasil · MOTY 2025' },
-  { id: 'DUeVbTGDiOI', title: 'Yeux Papillon', subtitle: 'Victoria Beckham · NK Store' },
-  { id: 'DXLC3aDjhLI', title: 'João Guilherme', subtitle: 'Gucci · Miami Film Festival' },
-  { id: 'DMSz7NZOG1j', title: 'Rodrigo Santoro', subtitle: 'Wimbledon · Zegna · Dunhill' },
-  { id: 'DVWtvdYEZ91', title: 'Pinheiro', subtitle: 'Mondepars · Brazil' },
-  { id: 'DGLSVrFOh0w', title: 'Neiva Laura', subtitle: 'Archive · Styled by Thiago Biagi' },
-  { id: 'DR5fqOlDvfY', title: 'Borsoi', subtitle: 'Bottega Veneta · Oscar Niemeyer' },
-  { id: 'DQAhRq5Dj04', title: 'Agnes Nunes', subtitle: 'Halloween Sephora' },
-  { id: 'DQC2um9jhKx', title: 'It Gaspar', subtitle: 'Light test · Studio life' },
-  { id: 'DNV-E51t2oD', title: 'Jhona Burjack', subtitle: 'Fucking Young · Une Espérance' },
-  { id: 'DLkFH0xOwwm', title: 'L’Officiel Hommes Brasil', subtitle: 'Fashion editorial · Archive' },
+const galleryImages = [
+  ['/portfolio/kaka-gq.jpg', 'Kaká para GQ Brasil'], ['/portfolio/chay-suede.jpg', 'Chay Suede em editorial'],
+  ['/portfolio/joao-guilherme.jpg', 'João Guilherme em editorial'], ['/portfolio/wagner-gq.jpg', 'Wagner Moura para GQ Brasil'],
+  ['/portfolio/1f3c396b1d80843a.jpg', 'Editorial de moda'], ['/portfolio/011a9b1f61d3e823.jpg', 'Editorial selecionado'],
+  ['/portfolio/1462be1feeff08a9.jpg', 'Editorial selecionado'], ['/portfolio/516f438bf75f3e34.jpg', 'Editorial selecionado'],
+  ['/portfolio/96f56d8e6bf3cd13.jpg', 'Editorial selecionado'], ['/portfolio/9efc17a7fad74256.jpg', 'Editorial selecionado'],
+  ['/portfolio/a649776885d16b65.jpg', 'Editorial selecionado'], ['/portfolio/b43569d002582df1.jpg', 'Editorial selecionado'],
+  ['/portfolio/e391254f4b6ce102.jpg', 'Fashion story'], ['/portfolio/d9309bc460f95a72.jpg', 'Magazine story'],
 ];
 
 export default function Home() {
@@ -65,10 +40,6 @@ export default function Home() {
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/joao-guilherme.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/joao-guilherme.jpg" alt="João Guilherme com styling de Thiago Biagi" /><span>João Guilherme / Prime Video</span></div>
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/1f3c396b1d80843a.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/1f3c396b1d80843a.jpg" alt="Izabel Goulart em editorial de moda" /><span>Editorial / Archive</span></div>
         </figure>
-        <aside className="hero-motion" aria-label="Vídeos em destaque">
-          <div className="hero-reel"><iframe src="https://www.instagram.com/reel/Db0nUrmuKC-/embed/" title="Chay Suede — fashion film" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" /><span>01 / Chay Suede</span></div>
-          <div className="hero-reel"><iframe src="https://www.instagram.com/reel/DRicB_WDh5I/embed/" title="Wagner Moura — GQ Brasil" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" /><span>02 / Wagner Moura</span></div>
-        </aside>
         <a className="scroll" href="#work">Explore ↓</a>
       </section>
 
@@ -77,39 +48,8 @@ export default function Home() {
         <h2>Fashion as attitude.<br /><em>Image as narrative.</em></h2>
       </section>
 
-      <section className="motion" aria-label="Fashion film">
-        <div className="section-heading"><p>Motion / Fashion films</p><span>01 — 08</span></div>
-        <div className="motion-copy">
-          <p className="eyebrow">Selected moving image</p>
-          <h2>Style<br /><em>in motion.</em></h2>
-          <p>Uma seleção de bastidores, campanhas e editoriais em movimento, apresentada diretamente dos posts originais.</p>
-        </div>
-        <div className="reel-grid">
-          {reels.map((reel, index) => (
-            <article className="reel-card" key={reel.id}>
-              <div className="reel-frame">
-                <iframe src={`https://www.instagram.com/reel/${reel.id}/embed/`} title={`${reel.title} — ${reel.subtitle}`} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
-              </div>
-              <div className="reel-meta"><span>0{index + 1}</span><div><h3>{reel.title}</h3><p>{reel.subtitle}</p><a href={`https://www.instagram.com/reel/${reel.id}/`} target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="editorial-diary" aria-label="Diário editorial em Paris">
-        <div className="diary-copy">
-          <p className="eyebrow">Editorial stories / Selected</p>
-          <h2>Behind<br /><em>the vision.</em></h2>
-          <p>Campanhas, editoriais e diários visuais apresentados em seus carrosséis originais.</p>
-        </div>
-        <div className="story-grid">
-          {stories.map((story, index) => (
-            <article className="story-card" key={story.id}>
-              <div className="post-frame"><iframe src={`https://www.instagram.com/p/${story.id}/embed/`} title={`${story.title} — ${story.subtitle}`} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" /></div>
-              <div className="story-meta"><span>0{index + 1}</span><div><h3>{story.title}</h3><p>{story.subtitle}</p><a href={`https://www.instagram.com/p/${story.id}/`} target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
-            </article>
-          ))}
-        </div>
+      <section className="image-wall" aria-label="Galeria editorial">
+        {galleryImages.map(([src, alt], index) => <figure key={src} className={`wall-image wall-image-${index + 1}`}><img src={src} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} /></figure>)}
       </section>
 
       <section className="work" id="work">
@@ -120,7 +60,7 @@ export default function Home() {
               <div className="project-image"><img src={project.image} alt={project.alt} loading="lazy" /></div>
               <div className="project-meta">
                 <span>{project.number}</span>
-                <div><h3><a href={project.href} target="_blank" rel="noreferrer">{project.title} ↗</a></h3><p>{project.subtitle}</p><span className="project-note">{project.note}</span></div>
+                <div><h3>{project.title}</h3><p>{project.subtitle}</p><span className="project-note">{project.note}</span></div>
               </div>
             </article>
           ))}
