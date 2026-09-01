@@ -62,12 +62,12 @@ const pietRiachueloFilms = [
   '/portfolio/piet-riachuelo/film-02.mp4',
 ];
 
-const pietHeroImages = [
-  '/portfolio/piet-riachuelo/01.jpg',
-  '/portfolio/piet-riachuelo/04.jpg',
-  '/portfolio/piet-riachuelo/06.jpg',
-  '/portfolio/piet-riachuelo/09.jpg',
-  '/portfolio/piet-riachuelo/11.jpg',
+const marinaHeroImages = [
+  '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg',
+  '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg',
+  '/portfolio/magazine-covers/marina-editorial-01.jpg',
+  '/portfolio/magazine-covers/marina-editorial-02.jpg',
+  '/portfolio/magazine-covers/marina-editorial-03.jpg',
 ];
 
 const galleryImages = [
@@ -95,7 +95,7 @@ const motion = [
 ];
 
 const covers = [
-  { title: 'Marina Ruy Barbosa', publication: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg', alt: 'Capa da Marie Claire Brasil de setembro de 2026 com Marina Ruy Barbosa', story: ['/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg'] },
+  { title: 'Marina Ruy Barbosa', publication: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg', alt: 'Capa da Marie Claire Brasil de setembro de 2026 com Marina Ruy Barbosa', story: ['/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg', '/portfolio/magazine-covers/marina-editorial-01.jpg', '/portfolio/magazine-covers/marina-editorial-02.jpg', '/portfolio/magazine-covers/marina-editorial-03.jpg'] },
   { title: 'João Guilherme', publication: 'GQ Brasil · Men of the Year 2024', image: '/portfolio/magazine-covers/SaveVid.Net_469257802_18478644646027380_1905629404697638516_n.jpg', alt: 'Capa da GQ Brasil com João Guilherme', story: ['/portfolio/joao-guilherme.jpg'] },
   { title: 'Fabio Porchat', publication: 'GQ Brasil · Creativity Awards 2025', image: '/portfolio/magazine-covers/SaveVid.Net_497871643_18509216137027380_8014493567002082460_n.jpg', alt: 'Capa da GQ Brasil com Fabio Porchat', story: [] },
   { title: 'Arthur Paek', publication: "L’Officiel Hommes Brasil", image: '/portfolio/magazine-covers/SaveVid.Net_502357379_18518750551027380_5881339525250106580_n.jpg', alt: 'Capa da L’Officiel Hommes Brasil com Arthur Paek', story: ['/portfolio/instagram-full/arthur-paek-editorial.jpg'] },
@@ -138,9 +138,9 @@ export default function Home() {
         </div>
         <figure className="hero-editorial-image">
           <div className="hero-campaign-slides">
-            {pietHeroImages.map((image, index) => <img src={image} alt={`Campanha PIET + Riachuelo, destaque ${index + 1}`} key={image} />)}
+            {marinaHeroImages.map((image, index) => <img src={image} alt={`Marina Ruy Barbosa para Marie Claire Brasil, destaque ${index + 1}`} key={image} />)}
           </div>
-          <figcaption>PIET + Riachuelo / Campaign</figcaption>
+          <figcaption>Marina Ruy Barbosa / Marie Claire Brasil</figcaption>
         </figure>
       </section>
 
@@ -156,6 +156,11 @@ export default function Home() {
         <div className="marina-covers-pair">
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg" alt="Primeira capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>01</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg" alt="Segunda capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>02</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
+        </div>
+        <div className="marina-editorial-strip">
+          <figure><img src="/portfolio/magazine-covers/marina-editorial-01.jpg" alt="Marina Ruy Barbosa em ensaio para a Marie Claire Brasil" /><figcaption>Ensaio / Marie Claire Brasil</figcaption></figure>
+          <figure><img src="/portfolio/magazine-covers/marina-editorial-02.jpg" alt="Retrato editorial de Marina Ruy Barbosa" /><figcaption>Fotos / Ivan Erick — Thinkers Mgmt</figcaption></figure>
+          <figure><img src="/portfolio/magazine-covers/marina-editorial-03.jpg" alt="Marina Ruy Barbosa em retrato do ensaio de setembro de 2026" /><figcaption>Setembro 2026</figcaption></figure>
         </div>
       </section>
 

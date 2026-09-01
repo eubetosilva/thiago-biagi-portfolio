@@ -53,6 +53,11 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .marina-covers-pair img { width:100%; height:auto; display:block; }
 .marina-covers-pair figcaption { display:grid; grid-template-columns:34px 1fr; gap:10px; margin-top:10px; padding-top:9px; border-top:1px solid #deddd8; font-size:8px; text-transform:uppercase; letter-spacing:.11em; }
 .marina-covers-pair figcaption p { margin:0; }
+.marina-editorial-strip { display:grid; grid-template-columns:1.15fr .85fr .85fr; gap:4px; align-items:end; margin-top:9vw; }
+.marina-editorial-strip figure { margin:0; }
+.marina-editorial-strip figure:nth-child(2) { margin-bottom:8vw; }
+.marina-editorial-strip img { display:block; width:100%; height:auto; }
+.marina-editorial-strip figcaption { padding-top:9px; font-size:7px; text-transform:uppercase; letter-spacing:.11em; }
 .wall-image { margin:0; min-height:62vw; grid-column:span 6; overflow:hidden; background:#eee; }
 .wall-image:nth-child(4n+2),.wall-image:nth-child(4n+3) { min-height:42vw; }
 .wall-image:nth-child(5n) { grid-column:span 12; min-height:82vh; }
@@ -137,6 +142,9 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .marina-covers-pair { gap:4px; }
   .marina-covers-pair figure:nth-child(2) { margin-top:12vw; }
   .marina-covers-pair figcaption { grid-template-columns:22px 1fr; gap:4px; font-size:6px; }
+  .marina-editorial-strip { grid-template-columns:1fr 1fr; margin-top:20vw; }
+  .marina-editorial-strip figure:first-child { grid-column:1 / -1; }
+  .marina-editorial-strip figure:nth-child(2) { margin-bottom:10vw; }
   .wall-image,.wall-image:nth-child(5n) { grid-column:auto; min-height:0; height:78vh; }
   .magazine { padding:24vw 18px; }
   .magazine-grid { grid-template-columns:1fr; gap:20vw; margin-top:12vw; }
