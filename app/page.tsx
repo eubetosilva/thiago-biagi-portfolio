@@ -65,6 +65,10 @@ export default function Home() {
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/joao-guilherme.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/joao-guilherme.jpg" alt="João Guilherme com styling de Thiago Biagi" /><span>João Guilherme / Prime Video</span></div>
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/1f3c396b1d80843a.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/1f3c396b1d80843a.jpg" alt="Izabel Goulart em editorial de moda" /><span>Editorial / Archive</span></div>
         </figure>
+        <aside className="hero-motion" aria-label="Vídeos em destaque">
+          <div className="hero-reel"><iframe src="https://www.instagram.com/reel/Db0nUrmuKC-/embed/" title="Chay Suede — fashion film" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" /><span>01 / Chay Suede</span></div>
+          <div className="hero-reel"><iframe src="https://www.instagram.com/reel/DRicB_WDh5I/embed/" title="Wagner Moura — GQ Brasil" loading="eager" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" /><span>02 / Wagner Moura</span></div>
+        </aside>
         <a className="scroll" href="#work">Explore ↓</a>
       </section>
 
