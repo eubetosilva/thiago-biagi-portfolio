@@ -24,20 +24,14 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="kicker">Fashion Editor · Creative Consultant · Brazil</p>
+          <p className="kicker">Fashion Editor · Creative Consultant · São Paulo</p>
           <h1><span>Thiago Biagi</span></h1>
+          <a href="#work" className="hero-link">View selected work ↓</a>
         </div>
         <figure className="hero-image">
-          <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/kaka-gq.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/kaka-gq.jpg" alt="Kaká para GQ Brasil" /><span>Kaká / GQ Brasil</span></div>
-          <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/chay-suede.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/chay-suede.jpg" alt="Chay Suede com styling de Thiago Biagi" /><span>Chay Suede / Styling</span></div>
-          <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/joao-guilherme.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/joao-guilherme.jpg" alt="João Guilherme com styling de Thiago Biagi" /><span>João Guilherme / Prime Video</span></div>
-          <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/1f3c396b1d80843a.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/1f3c396b1d80843a.jpg" alt="Izabel Goulart em editorial de moda" /><span>Editorial / Archive</span></div>
+          <div className="hero-panel hero-panel-left"><img src="/portfolio/instagram/numero-editorial.jpg" alt="Editorial de moda para Numéro Netherlands" /><span>Numéro Netherlands / Editorial</span></div>
+          <div className="hero-panel hero-panel-right"><img src="/portfolio/instagram/borsoi-dior.jpg" alt="Editorial masculino com styling de Thiago Biagi" /><span>Dior / Styling</span></div>
         </figure>
-      </section>
-
-      <section className="intro" aria-label="Apresentação">
-        <p className="eyebrow">Creative direction / Styling</p>
-        <h2>Fashion as attitude.<br /><em>Image as narrative.</em></h2>
       </section>
 
       <section className="image-wall" aria-label="Galeria editorial">

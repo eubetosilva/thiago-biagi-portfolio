@@ -124,3 +124,33 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .post-frame { min-height:620px; }
   .post-frame iframe { height:680px; }
 }
+
+/* Minimal campaign opening inspired by contemporary French fashion houses */
+.site-header { position:absolute; height:82px; padding:0 2.2vw; color:#111; background:#fff; border:0; }
+.wordmark { font-size:18px; font-weight:900; letter-spacing:-.025em; }
+.site-header nav { gap:32px; font-size:11px; text-transform:none; letter-spacing:0; }
+.site-header .instagram { font-size:11px; text-transform:none; letter-spacing:0; }
+.hero { min-height:100vh; padding-top:82px; color:#111; background:#fff; }
+.hero::after { display:none; }
+.hero-image { position:absolute; inset:82px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:2px; background:#fff; }
+.hero-panel { position:relative; overflow:hidden; min-width:0; }
+.hero-panel img { width:100%; height:100%; object-fit:cover; filter:none; transition:transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.hero-panel-left img { object-position:center 26%; }
+.hero-panel-right img { object-position:center 34%; }
+.hero-panel:hover img { transform:scale(1.012); }
+.hero-panel span { position:absolute; left:22px; bottom:20px; color:#fff; font-size:10px; letter-spacing:.03em; text-shadow:0 1px 12px rgba(0,0,0,.55); }
+.hero-copy { inset:82px 0 0; padding:22px 2.2vw; pointer-events:none; justify-content:space-between; }
+.hero .kicker { width:max-content; padding:8px 10px; color:#111; background:#fff; font-size:9px; letter-spacing:.12em; text-shadow:none; }
+.hero h1 { display:none; }
+.hero-link { align-self:center; margin-bottom:18px; padding:11px 17px; color:#111; background:#fff; font-size:10px; letter-spacing:.03em; pointer-events:auto; }
+
+@media (max-width:760px) {
+  .site-header { height:68px; padding:0 16px; }
+  .wordmark { font-size:16px; }
+  .hero { min-height:100svh; padding-top:68px; }
+  .hero-image { inset:68px 0 0; grid-template-columns:1fr; grid-template-rows:1fr 1fr; gap:2px; }
+  .hero-copy { inset:68px 0 0; padding:14px 16px; }
+  .hero-panel span { left:14px; bottom:12px; font-size:8px; }
+  .hero-panel-right span { bottom:58px; }
+  .hero-link { align-self:flex-end; margin:0 0 2px; }
+}
