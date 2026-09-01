@@ -4,8 +4,11 @@ const projects = [
 ];
 
 const galleryImages = [
-  ['/portfolio/chay-suede.jpg', 'Chay Suede em editorial'],
-  ['/portfolio/joao-guilherme.jpg', 'João Guilherme em editorial'],
+  ['/portfolio/instagram/borsoi-dior.jpg', 'Editorial masculino com styling de Thiago Biagi'],
+  ['/portfolio/instagram/dior-hotel.jpg', 'Bastidores de produção Dior em Paris'],
+  ['/portfolio/instagram/numero-editorial.jpg', 'Editorial de moda para Numéro Netherlands'],
+  ['/portfolio/instagram/joao-vicente-gala.jpg', 'João Vicente de Castro em styling de gala'],
+  ['/portfolio/instagram/fucking-young-editorial.jpg', 'Editorial masculino para Fucking Young'],
 ];
 
 export default function Home() {
