@@ -1,20 +1,11 @@
 const projects = [
-  { number: '01', title: 'Wagner Moura', subtitle: 'GQ Brasil · Bob Wolfenson · Dior', image: '/portfolio/wagner-gq.jpg', alt: 'Wagner Moura para GQ Brasil', href: 'https://www.instagram.com/thiagobiagi/p/DRevkVQjt6l/', note: 'Golden Globe winner · Oscar nominee' },
-  { number: '02', title: 'Kaká', subtitle: 'GQ Brasil · Franco Amendola', image: '/portfolio/kaka-gq.jpg', alt: 'Kaká para GQ Brasil', href: 'https://www.instagram.com/thiagobiagi/p/DYFSITtDuPU/', note: 'Cover story' },
-  { number: '03', title: 'Chay Suede', subtitle: 'Celebrity styling · Prada · Hermès', image: '/portfolio/chay-suede.jpg', alt: 'Chay Suede com styling de Thiago Biagi', href: 'https://www.instagram.com/thiagobiagi/p/Db_cJNJlq5u/', note: 'Styling' },
-  { number: '04', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme com styling de Thiago Biagi', href: 'https://www.instagram.com/thiagobiagi/p/DbboPrpls1V/', note: 'Celebrity styling' },
-  { number: '05', title: 'Editorial', subtitle: 'Fashion stories · Archive', image: '/portfolio/e391254f4b6ce102.jpg', alt: 'Editorial com Marcela Fetter', href: 'https://www.thiagobiagi.com/galeria-1', note: 'Selected archive' },
-  { number: '06', title: 'Magazine', subtitle: 'Print & digital · Archive', image: '/portfolio/d9309bc460f95a72.jpg', alt: 'Editorial para Victor Magazine Men', href: 'https://www.thiagobiagi.com/magazine', note: 'Selected archive' },
+  { number: '01', title: 'Chay Suede', subtitle: 'Celebrity styling · Prada · Hermès', image: '/portfolio/chay-suede.jpg', alt: 'Chay Suede com styling de Thiago Biagi', note: 'Styling' },
+  { number: '02', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme com styling de Thiago Biagi', note: 'Celebrity styling' },
 ];
 
 const galleryImages = [
-  ['/portfolio/kaka-gq.jpg', 'Kaká para GQ Brasil'], ['/portfolio/chay-suede.jpg', 'Chay Suede em editorial'],
-  ['/portfolio/joao-guilherme.jpg', 'João Guilherme em editorial'], ['/portfolio/wagner-gq.jpg', 'Wagner Moura para GQ Brasil'],
-  ['/portfolio/1f3c396b1d80843a.jpg', 'Editorial de moda'], ['/portfolio/011a9b1f61d3e823.jpg', 'Editorial selecionado'],
-  ['/portfolio/1462be1feeff08a9.jpg', 'Editorial selecionado'], ['/portfolio/516f438bf75f3e34.jpg', 'Editorial selecionado'],
-  ['/portfolio/96f56d8e6bf3cd13.jpg', 'Editorial selecionado'], ['/portfolio/9efc17a7fad74256.jpg', 'Editorial selecionado'],
-  ['/portfolio/a649776885d16b65.jpg', 'Editorial selecionado'], ['/portfolio/b43569d002582df1.jpg', 'Editorial selecionado'],
-  ['/portfolio/e391254f4b6ce102.jpg', 'Fashion story'], ['/portfolio/d9309bc460f95a72.jpg', 'Magazine story'],
+  ['/portfolio/chay-suede.jpg', 'Chay Suede em editorial'],
+  ['/portfolio/joao-guilherme.jpg', 'João Guilherme em editorial'],
 ];
 
 export default function Home() {
@@ -51,7 +42,7 @@ export default function Home() {
       </section>
 
       <section className="work" id="work">
-        <div className="section-heading"><p>Selected work</p><span>01 — 06</span></div>
+        <div className="section-heading"><p>Selected work</p><span>01 — 02</span></div>
         <div className="project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
@@ -62,6 +53,14 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="magazine" aria-label="Capas de revista">
+        <div className="section-heading"><p>Magazine / Covers</p><span>01 — 02</span></div>
+        <div className="magazine-grid">
+          <figure><img src="/portfolio/wagner-gq.jpg" alt="Capa da GQ Brasil com Wagner Moura" loading="lazy" /><figcaption><span>01</span><h3>Wagner Moura</h3><p>GQ Brasil · MOTY</p></figcaption></figure>
+          <figure><img src="/portfolio/kaka-gq.jpg" alt="Capa da GQ Brasil com Kaká" loading="lazy" /><figcaption><span>02</span><h3>Kaká</h3><p>GQ Brasil · Cover story</p></figcaption></figure>
         </div>
       </section>
 
