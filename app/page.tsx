@@ -38,6 +38,8 @@ const stories = [
   { id: 'DR5fqOlDvfY', title: 'Borsoi', subtitle: 'Bottega Veneta · Oscar Niemeyer' },
   { id: 'DQAhRq5Dj04', title: 'Agnes Nunes', subtitle: 'Halloween Sephora' },
   { id: 'DQC2um9jhKx', title: 'It Gaspar', subtitle: 'Light test · Studio life' },
+  { id: 'DNV-E51t2oD', title: 'Jhona Burjack', subtitle: 'Fucking Young · Une Espérance' },
+  { id: 'DLkFH0xOwwm', title: 'L’Officiel Hommes Brasil', subtitle: 'Fashion editorial · Archive' },
 ];
 
 export default function Home() {
