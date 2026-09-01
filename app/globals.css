@@ -130,6 +130,14 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .cover-photo { position:relative; min-height:calc(100vh - 82px); overflow:hidden; }
 .cover-photo img { object-position:center 24%; }
 .cover-photo > span { position:absolute; left:22px; bottom:20px; color:#fff; font-size:9px; text-transform:uppercase; letter-spacing:.14em; text-shadow:0 1px 12px rgba(0,0,0,.55); }
+.cover-collage { display:grid; grid-template-columns:1.08fr .92fr; grid-template-rows:1fr 1fr; gap:3px; background:#ece9e0; }
+.cover-collage figure { position:relative; margin:0; overflow:hidden; min-width:0; min-height:0; }
+.cover-collage figure:first-child { grid-row:span 2; }
+.cover-collage figure img { object-fit:cover; object-position:center 25%; transition:transform 1s cubic-bezier(.2,.7,.2,1); }
+.cover-collage figure:nth-child(2) img { object-position:center 20%; }
+.cover-collage figure:nth-child(3) img { object-position:center 20%; }
+.cover-collage figure:hover img { transform:scale(1.018); }
+.cover-collage figcaption { position:absolute; left:12px; bottom:11px; color:#fff; font-size:7px; text-transform:uppercase; letter-spacing:.13em; text-shadow:0 1px 10px rgba(0,0,0,.75); }
 .cover-story { min-height:calc(100vh - 82px); padding:24px 2.5vw 2.2vw; display:flex; flex-direction:column; border-left:1px solid rgba(16,16,15,.18); }
 .issue-line { display:flex; justify-content:space-between; padding-bottom:12px; border-bottom:1px solid rgba(16,16,15,.45); font-size:8px; text-transform:uppercase; letter-spacing:.16em; }
 .cover-title { margin:auto 0; }
@@ -155,6 +163,8 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 @media (max-width:760px) {
   .hero { grid-template-columns:1fr; grid-template-rows:58svh auto; min-height:100svh; padding-top:68px; }
   .cover-photo { min-height:0; }
+  .cover-collage { grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; }
+  .cover-collage figure:first-child { grid-row:span 1; }
   .cover-story { min-height:auto; padding:18px 16px 28px; border-left:0; }
   .cover-title { margin:14vw 0 16vw; }
   .cover-title > p { margin-bottom:8vw; }

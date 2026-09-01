@@ -6,7 +6,7 @@ const projects = [
   { number: '05', title: 'Rodrigo Santoro', subtitle: 'Red carpet · Evening tailoring', image: '/portfolio/instagram-full/rodrigo-santoro.jpg', alt: 'Rodrigo Santoro em styling de gala', note: 'Celebrity styling' },
   { number: '06', title: 'Agnes Nunes', subtitle: 'Music · Fashion portrait', image: '/portfolio/instagram-full/agnes-nunes.jpg', alt: 'Agnes Nunes em editorial musical', note: 'Image' },
   { number: '07', title: 'João Vicente', subtitle: 'Dries Van Noten · Omega', image: '/portfolio/instagram/joao-vicente-gala.jpg', alt: 'João Vicente de Castro em styling de gala', note: 'Celebrity styling' },
-  { number: '08', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek.jpg', alt: "Arthur Paek para L'Officiel Hommes", note: 'Cover story' },
+  { number: '08', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek-editorial.jpg', alt: 'Arthur Paek em editorial de alfaiataria', note: 'Celebrity styling' },
 ];
 
 const galleryImages = [
@@ -56,7 +56,12 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="cover-photo"><img src="/portfolio/instagram/numero-editorial.jpg" alt="Editorial de moda para Numéro Netherlands" /><span>Numéro Netherlands / Editorial</span></div>
+        <div className="cover-photo cover-collage" aria-label="Seleção de trabalhos de Thiago Biagi">
+          <figure><img src="/portfolio/instagram-full/wagner-moura.jpg" alt="Wagner Moura para GQ Brasil" /><figcaption>Wagner Moura / GQ</figcaption></figure>
+          <figure><img src="/portfolio/instagram-full/arthur-paek-editorial.jpg" alt="Arthur Paek em editorial de alfaiataria" /><figcaption>Arthur Paek / L’Officiel</figcaption></figure>
+          <figure><img src="/portfolio/instagram-full/agnes-nunes.jpg" alt="Agnes Nunes em editorial musical" /><figcaption>Agnes Nunes / Music</figcaption></figure>
+          <figure><img src="/portfolio/instagram-full/armor-editorial.jpg" alt="Editorial masculino com armadura" /><figcaption>Fashion story / Editorial</figcaption></figure>
+        </div>
         <div className="cover-story">
           <div className="issue-line"><span>Portfolio No. 01</span><span>São Paulo · 2026</span></div>
           <div className="cover-title"><p>Fashion editor<br />&amp; creative consultant</p><h1>Thiago<br /><em>Biagi</em></h1></div>
