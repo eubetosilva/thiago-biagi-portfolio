@@ -31,8 +31,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="kicker">Fashion Editor · Creative Consultant · Brazil</p>
-          <h1><span>Thiago</span><span>Biagi</span></h1>
-          <div className="hero-note"><span>Fashion</span><span>Culture</span><span>Image</span></div>
+          <h1><span>Thiago Biagi</span></h1>
         </div>
         <figure className="hero-image">
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/kaka-gq.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/kaka-gq.jpg" alt="Kaká para GQ Brasil" /><span>Kaká / GQ Brasil</span></div>
@@ -40,7 +39,6 @@ export default function Home() {
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/joao-guilherme.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/joao-guilherme.jpg" alt="João Guilherme com styling de Thiago Biagi" /><span>João Guilherme / Prime Video</span></div>
           <div className="hero-slide"><img className="slide-backdrop" src="/portfolio/1f3c396b1d80843a.jpg" alt="" aria-hidden="true" /><img className="slide-subject" src="/portfolio/1f3c396b1d80843a.jpg" alt="Izabel Goulart em editorial de moda" /><span>Editorial / Archive</span></div>
         </figure>
-        <a className="scroll" href="#work">Explore ↓</a>
       </section>
 
       <section className="intro" aria-label="Apresentação">
