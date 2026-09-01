@@ -35,6 +35,15 @@ const motion = [
   ['DRicB_WDh5I', '/portfolio/motion/07.jpg'], ['DNY97QMOqxg', '/portfolio/motion/08.jpg'],
 ];
 
+const covers = [
+  { title: 'Wagner Moura', publication: 'GQ Brasil · MOTY', image: '/portfolio/wagner-gq.jpg', alt: 'Capa da GQ Brasil com Wagner Moura' },
+  { title: 'Kaká', publication: 'GQ Brasil · Cover story', image: '/portfolio/kaka-gq.jpg', alt: 'Capa da GQ Brasil com Kaká' },
+  { title: 'Kaká', publication: 'GQ Brasil · Fashion issue', image: '/portfolio/instagram-full/kaka.jpg', alt: 'Kaká em editorial para GQ Brasil' },
+  { title: 'Harper’s Bazaar Men', publication: 'Dior · Fashion story', image: '/portfolio/instagram-full/bazaar.jpg', alt: 'Editorial para Harper’s Bazaar Men' },
+  { title: 'Arthur Paek', publication: "L’Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek.jpg', alt: 'Arthur Paek para L’Officiel Hommes Brasil' },
+  { title: 'Numéro Netherlands', publication: 'International editorial', image: '/portfolio/instagram-full/numero.jpg', alt: 'Editorial para Numéro Netherlands' },
+];
+
 export default function Home() {
   return (
     <main>
@@ -85,10 +94,9 @@ export default function Home() {
       </section>
 
       <section className="magazine" aria-label="Capas de revista">
-        <div className="section-heading"><p>Magazine / Covers</p><span>01 — 02</span></div>
+        <div className="section-heading"><p>Magazine / Covers</p><span>01 — 06</span></div>
         <div className="magazine-grid">
-          <figure><img src="/portfolio/wagner-gq.jpg" alt="Capa da GQ Brasil com Wagner Moura" loading="lazy" /><figcaption><span>01</span><h3>Wagner Moura</h3><p>GQ Brasil · MOTY</p></figcaption></figure>
-          <figure><img src="/portfolio/kaka-gq.jpg" alt="Capa da GQ Brasil com Kaká" loading="lazy" /><figcaption><span>02</span><h3>Kaká</h3><p>GQ Brasil · Cover story</p></figcaption></figure>
+          {covers.map((cover, index) => <figure key={`${cover.title}-${index}`}><img src={cover.image} alt={cover.alt} loading="lazy" /><figcaption><span>{String(index + 1).padStart(2, '0')}</span><h3>{cover.title}</h3><p>{cover.publication}</p></figcaption></figure>)}
         </div>
       </section>
 
