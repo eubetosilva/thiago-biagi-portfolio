@@ -1,14 +1,38 @@
 const projects = [
   { number: '01', title: 'Chay Suede', subtitle: 'Celebrity styling · Prada · Hermès', image: '/portfolio/chay-suede.jpg', alt: 'Chay Suede com styling de Thiago Biagi', note: 'Styling' },
   { number: '02', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme com styling de Thiago Biagi', note: 'Celebrity styling' },
+  { number: '03', title: 'Wagner Moura', subtitle: 'GQ Brasil · Dior', image: '/portfolio/instagram-full/wagner-moura.jpg', alt: 'Wagner Moura para GQ Brasil', note: 'Cover story' },
+  { number: '04', title: 'Kaká', subtitle: 'GQ Brasil · Fashion editorial', image: '/portfolio/instagram-full/kaka.jpg', alt: 'Kaká para GQ Brasil', note: 'Celebrity styling' },
+  { number: '05', title: 'Rodrigo Santoro', subtitle: 'Red carpet · Evening tailoring', image: '/portfolio/instagram-full/rodrigo-santoro.jpg', alt: 'Rodrigo Santoro em styling de gala', note: 'Celebrity styling' },
+  { number: '06', title: 'Agnes Nunes', subtitle: 'Music · Fashion portrait', image: '/portfolio/instagram-full/agnes-nunes.jpg', alt: 'Agnes Nunes em editorial musical', note: 'Image' },
+  { number: '07', title: 'João Vicente', subtitle: 'Dries Van Noten · Omega', image: '/portfolio/instagram/joao-vicente-gala.jpg', alt: 'João Vicente de Castro em styling de gala', note: 'Celebrity styling' },
+  { number: '08', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek.jpg', alt: "Arthur Paek para L'Officiel Hommes", note: 'Cover story' },
 ];
 
 const galleryImages = [
-  ['/portfolio/instagram/borsoi-dior.jpg', 'Editorial masculino com styling de Thiago Biagi'],
-  ['/portfolio/instagram/dior-hotel.jpg', 'Bastidores de produção Dior em Paris'],
-  ['/portfolio/instagram/numero-editorial.jpg', 'Editorial de moda para Numéro Netherlands'],
-  ['/portfolio/instagram/joao-vicente-gala.jpg', 'João Vicente de Castro em styling de gala'],
-  ['/portfolio/instagram/fucking-young-editorial.jpg', 'Editorial masculino para Fucking Young'],
+  ['/portfolio/instagram-full/dalj.jpg', 'Editorial masculino contemporâneo'],
+  ['/portfolio/instagram-full/borsoi.jpg', 'Editorial masculino para Dior'],
+  ['/portfolio/instagram-full/julio-reis.jpg', 'Retrato em linguagem Polaroid'],
+  ['/portfolio/instagram-full/fucking-young.jpg', 'Editorial para Fucking Young'],
+  ['/portfolio/instagram-full/numero.jpg', 'Editorial para Numéro Netherlands'],
+  ['/portfolio/instagram-full/portrait-white.jpg', 'Retrato feminino em branco'],
+  ['/portfolio/instagram-full/bazaar.jpg', 'Editorial para Harper’s Bazaar Men'],
+  ['/portfolio/instagram-full/garden.jpg', 'Editorial feminino em jardim'],
+  ['/portfolio/instagram-full/night-suit.jpg', 'Tailoring noturno'],
+  ['/portfolio/instagram-full/white-dress.jpg', 'Vestido branco em retrato editorial'],
+  ['/portfolio/instagram-full/suit-camera.jpg', 'Editorial masculino de alfaiataria'],
+  ['/portfolio/instagram-full/field-suit.jpg', 'Alfaiataria em locação externa'],
+  ['/portfolio/instagram-full/pearl-dress.jpg', 'Editorial feminino em vestido bordado'],
+  ['/portfolio/instagram-full/yellow-portrait.jpg', 'Retrato masculino em amarelo'],
+  ['/portfolio/instagram-full/denim-portrait.jpg', 'Retrato masculino em denim'],
+  ['/portfolio/instagram-full/armor-editorial.jpg', 'Editorial masculino com armadura'],
+];
+
+const motion = [
+  ['Db0nUrmuKC-', '/portfolio/motion/01.jpg'], ['DbOUSBKu6LA', '/portfolio/motion/02.jpg'],
+  ['DaNiK5JIWu_', '/portfolio/motion/03.jpg'], ['DZn3Tv6glDK', '/portfolio/motion/04.jpg'],
+  ['DYPPqFGuKx3', '/portfolio/motion/05.jpg'], ['DXzx-KjxwrN', '/portfolio/motion/06.jpg'],
+  ['DRicB_WDh5I', '/portfolio/motion/07.jpg'], ['DNY97QMOqxg', '/portfolio/motion/08.jpg'],
 ];
 
 export default function Home() {
@@ -39,7 +63,7 @@ export default function Home() {
       </section>
 
       <section className="work" id="work">
-        <div className="section-heading"><p>Selected work</p><span>01 — 02</span></div>
+        <div className="section-heading"><p>Celebrity portfolio</p><span>01 — 08</span></div>
         <div className="project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
@@ -50,6 +74,13 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="motion-clean" aria-label="Fashion films">
+        <div className="section-heading"><p>Motion / Fashion films</p><span>01 — 08</span></div>
+        <div className="motion-clean-grid">
+          {motion.map(([code, image], index) => <a href={`https://www.instagram.com/reel/${code}/`} target="_blank" rel="noreferrer" className="motion-clean-card" key={code}><figure><img src={image} alt={`Fashion film ${index + 1}`} loading="lazy" /><span>Play film ↗</span></figure><p>{String(index + 1).padStart(2, '0')} / Motion</p></a>)}
         </div>
       </section>
 
