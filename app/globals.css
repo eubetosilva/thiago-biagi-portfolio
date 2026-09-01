@@ -42,6 +42,17 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .hero-reel iframe { display:block; width:100%; height:clamp(300px,52vh,530px); border:0; background:#111; box-shadow:0 18px 50px rgba(0,0,0,.3); }
 .hero-reel span { display:block; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,.55); font-size:8px; text-transform:uppercase; letter-spacing:.14em; text-shadow:0 1px 10px rgba(0,0,0,.7); }
 .image-wall { display:grid; grid-template-columns:repeat(12,1fr); gap:4px; padding:4px; background:#fff; }
+.marina-covers-post { padding:8vw 2.7vw 10vw; background:#fff; }
+.marina-covers-intro { display:grid; grid-template-columns:1.2fr .8fr; gap:8vw; align-items:end; margin:5vw 0 6vw; }
+.marina-covers-intro h2 { margin:0; font-family:Georgia,'Times New Roman',serif; font-size:clamp(72px,10vw,154px); font-weight:400; line-height:.82; letter-spacing:-.06em; }
+.marina-covers-intro p { max-width:470px; margin:0 0 24px; font-size:15px; line-height:1.55; color:#55534f; }
+.marina-covers-intro a { display:inline-block; padding-bottom:4px; border-bottom:1px solid #111; font-size:9px; text-transform:uppercase; letter-spacing:.12em; }
+.marina-covers-pair { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; }
+.marina-covers-pair figure { margin:0; }
+.marina-covers-pair figure:nth-child(2) { margin-top:8vw; }
+.marina-covers-pair img { width:100%; height:auto; display:block; }
+.marina-covers-pair figcaption { display:grid; grid-template-columns:34px 1fr; gap:10px; margin-top:10px; padding-top:9px; border-top:1px solid #deddd8; font-size:8px; text-transform:uppercase; letter-spacing:.11em; }
+.marina-covers-pair figcaption p { margin:0; }
 .wall-image { margin:0; min-height:62vw; grid-column:span 6; overflow:hidden; background:#eee; }
 .wall-image:nth-child(4n+2),.wall-image:nth-child(4n+3) { min-height:42vw; }
 .wall-image:nth-child(5n) { grid-column:span 12; min-height:82vh; }
@@ -119,6 +130,13 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .hero-reel iframe { height:170px; }
   .hero-reel span { font-size:6px; }
   .image-wall { grid-template-columns:1fr; gap:3px; padding:3px; }
+  .marina-covers-post { padding:24vw 18px; }
+  .marina-covers-intro { display:block; margin:14vw 0 18vw; }
+  .marina-covers-intro h2 { margin:0 0 12vw; font-size:19vw; }
+  .marina-covers-intro p { font-size:13px; }
+  .marina-covers-pair { gap:4px; }
+  .marina-covers-pair figure:nth-child(2) { margin-top:12vw; }
+  .marina-covers-pair figcaption { grid-template-columns:22px 1fr; gap:4px; font-size:6px; }
   .wall-image,.wall-image:nth-child(5n) { grid-column:auto; min-height:0; height:78vh; }
   .magazine { padding:24vw 18px; }
   .magazine-grid { grid-template-columns:1fr; gap:20vw; margin-top:12vw; }

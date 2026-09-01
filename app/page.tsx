@@ -95,7 +95,7 @@ const motion = [
 ];
 
 const covers = [
-  { title: 'Marina Ruy Barbosa', publication: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg', alt: 'Capa da Marie Claire Brasil de setembro de 2026 com Marina Ruy Barbosa', story: [] },
+  { title: 'Marina Ruy Barbosa', publication: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg', alt: 'Capa da Marie Claire Brasil de setembro de 2026 com Marina Ruy Barbosa', story: ['/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg'] },
   { title: 'João Guilherme', publication: 'GQ Brasil · Men of the Year 2024', image: '/portfolio/magazine-covers/SaveVid.Net_469257802_18478644646027380_1905629404697638516_n.jpg', alt: 'Capa da GQ Brasil com João Guilherme', story: ['/portfolio/joao-guilherme.jpg'] },
   { title: 'Fabio Porchat', publication: 'GQ Brasil · Creativity Awards 2025', image: '/portfolio/magazine-covers/SaveVid.Net_497871643_18509216137027380_8014493567002082460_n.jpg', alt: 'Capa da GQ Brasil com Fabio Porchat', story: [] },
   { title: 'Arthur Paek', publication: "L’Officiel Hommes Brasil", image: '/portfolio/magazine-covers/SaveVid.Net_502357379_18518750551027380_5881339525250106580_n.jpg', alt: 'Capa da L’Officiel Hommes Brasil com Arthur Paek', story: ['/portfolio/instagram-full/arthur-paek-editorial.jpg'] },
@@ -142,6 +142,21 @@ export default function Home() {
           </div>
           <figcaption>PIET + Riachuelo / Campaign</figcaption>
         </figure>
+      </section>
+
+      <section className="marina-covers-post" aria-labelledby="marina-covers-title">
+        <div className="section-heading"><p id="marina-covers-title">Marina Ruy Barbosa / Marie Claire Brasil</p><span>Setembro 2026</span></div>
+        <div className="marina-covers-intro">
+          <h2>Diante<br />do espelho</h2>
+          <div>
+            <p>Depois de crescer sob o olhar público, Marina Ruy Barbosa celebra 23 anos de carreira e fala sobre amadurecimento, transformação e uma relação mais gentil com a própria imagem.</p>
+            <a href="https://revistamarieclaire.globo.com/moda/noticia/2026/09/marina-ruy-barbosa-tenho-orgulho-de-ter-construido-uma-carreira-um-patrimonio-e-a-minha-identidade.ghtml" target="_blank" rel="noreferrer">Entrevista completa na Marie Claire ↗</a>
+          </div>
+        </div>
+        <div className="marina-covers-pair">
+          <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg" alt="Primeira capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>01</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
+          <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg" alt="Segunda capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>02</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
+        </div>
       </section>
 
       <section className="image-wall" aria-label="Galeria editorial">
