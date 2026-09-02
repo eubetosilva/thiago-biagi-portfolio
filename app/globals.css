@@ -10,6 +10,27 @@
 .intro { padding:13vw 2.7vw 14vw; background:var(--ink); color:var(--paper); } .intro h2 { margin:7vw 0 0; font-family:Georgia,serif; font-size:clamp(54px,9.5vw,150px); font-weight:400; line-height:.9; letter-spacing:-.055em; } .intro h2 em { margin-left:8vw; font-weight:400; color:var(--acid); }
 .work { padding:8vw 2.7vw 11vw; } .section-heading { padding-bottom:18px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; } .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:9vw 2vw; margin-top:3vw; } .project-card:nth-child(even) { margin-top:10vw; } .project-image { aspect-ratio:4/5; overflow:hidden; background:#ddd; } .project-image img { transition:transform .8s cubic-bezier(.2,.7,.2,1); } .project-card:hover img { transform:scale(1.025); }
 .project-meta { display:grid; grid-template-columns:38px 1fr; gap:12px; padding-top:13px; border-top:1px solid var(--line); margin-top:9px; } .project-meta>span { font-size:9px; } .project-meta h3 { margin:-4px 0 2px; font-family:Georgia,serif; font-size:clamp(30px,3vw,50px); font-weight:400; letter-spacing:-.045em; } .project-meta p { margin:0; font-size:9px; text-transform:uppercase; letter-spacing:.14em; }
+.project-study-button { position:relative; display:block; width:100%; padding:0; border:0; color:#fff; cursor:pointer; text-align:left; }
+.project-study-button span { position:absolute; right:14px; bottom:14px; padding:9px 12px; color:#111; background:#fff; font-size:8px; text-transform:uppercase; letter-spacing:.13em; }
+.project-study-button:focus-visible { outline:2px solid #111; outline-offset:5px; }
+.celebrity-profile { position:fixed; inset:0; z-index:120; overflow:auto; background:#f3f1eb; color:#111; }
+.celebrity-profile-close { position:fixed; top:20px; right:2.7vw; z-index:124; padding:9px 12px; border:1px solid rgba(255,255,255,.65); color:#fff; background:rgba(0,0,0,.28); backdrop-filter:blur(10px); font-size:9px; text-transform:uppercase; letter-spacing:.14em; cursor:pointer; }
+.celebrity-profile-hero { min-height:100svh; display:grid; grid-template-columns:.88fr 1.12fr; background:#151515; color:#fff; }
+.celebrity-profile-hero > div { padding:6vw 3vw 3vw; display:flex; flex-direction:column; }
+.celebrity-profile-hero p { margin:0; font-size:9px; text-transform:uppercase; letter-spacing:.18em; }
+.celebrity-profile-hero h2 { margin:auto 0; font-family:Georgia,'Times New Roman',serif; font-size:clamp(70px,8vw,130px); font-weight:400; line-height:.76; letter-spacing:-.065em; }
+.celebrity-profile-hero h2 em { display:block; margin-left:.55em; font-weight:400; }
+.celebrity-profile-intro { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; padding-top:14px; border-top:1px solid rgba(255,255,255,.4); font-size:8px; text-transform:uppercase; letter-spacing:.12em; }
+.celebrity-profile-hero figure { margin:0; min-width:0; overflow:hidden; }
+.celebrity-profile-hero figure img { object-position:center 28%; }
+.celebrity-profile-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:4px; padding:4px; background:#fff; }
+.celebrity-profile-grid figure { grid-column:span 6; margin:0; min-width:0; background:#eee; }
+.celebrity-profile-grid figure:nth-child(3n) { grid-column:span 12; }
+.celebrity-profile-grid img { width:100%; height:auto; max-height:96svh; object-fit:contain; background:#f5f4ef; }
+.celebrity-profile-grid figcaption { padding:10px 8px 34px; color:#111; background:#fff; font-size:8px; text-transform:uppercase; letter-spacing:.13em; }
+.celebrity-profile-credits { display:grid; grid-template-columns:1fr 2fr; gap:5vw; padding:7vw 2.7vw; color:#fff; background:#151515; border:0; }
+.celebrity-profile-credits p { margin:0; font-family:Georgia,serif; font-size:clamp(34px,4vw,64px); line-height:.95; }
+.celebrity-profile-credits div { display:grid; grid-template-columns:1fr 1fr; gap:14px 24px; align-content:start; font-size:9px; text-transform:uppercase; letter-spacing:.13em; }
 .project-note { display:inline-block; margin-top:9px; padding:5px 9px; border:1px solid var(--line); border-radius:999px; font-size:8px; text-transform:uppercase; letter-spacing:.12em; }
 .about figure { overflow:hidden; }
 .about figure img { object-position:center 18%; }
@@ -17,6 +38,18 @@
 .contact { padding:7vw 2.7vw 3vw; display:flex; flex-direction:column; gap:4vw; } .contact-row { padding-top:20px; border-top:1px solid var(--line); display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; font-size:10px; text-transform:uppercase; letter-spacing:.13em; } .contact-row p { margin:0; text-align:right; }
 footer { display:flex; justify-content:space-between; gap:20px; border-top:1px solid var(--line); padding:20px 2.7vw; font-size:8px; text-transform:uppercase; letter-spacing:.14em; }
 @media (max-width:760px) { .site-header { grid-template-columns:1fr auto; } nav { display:none; } .hero { min-height:auto; padding:22px 18px 80px; grid-template-columns:1fr; } .hero-copy { min-height:47vh; } .hero h1 { font-size:26vw; line-height:.76; } .hero h1 span:last-child { margin-left:4vw; } .hero-image { height:66vh; } .scroll { left:auto; right:18px; bottom:42px; transform:none; } .intro { padding:28vw 18px; } .intro h2 em { margin-left:0; } .work { padding:24vw 18px; } .project-grid { grid-template-columns:1fr; gap:20vw; margin-top:9vw; } .project-card:nth-child(even) { margin-top:0; } .about { grid-template-columns:1fr; gap:14vw; padding:18px 18px 22vw; } .about figure { min-height:0; height:75vh; } .about-copy { padding:0; } .about h2 { font-size:12vw; margin:14vw 0 10vw; } .about-text { grid-template-columns:1fr; font-size:13px; } .text-link { margin-top:14vw; } .contact { padding:24vw 18px 12vw; gap:12vw; } .contact-row { grid-template-columns:1fr; gap:18px; } .contact-row p { text-align:left; } footer { padding-inline:18px; flex-direction:column; } }
+@media (max-width:760px) {
+  .celebrity-profile-close { top:12px; right:12px; }
+  .celebrity-profile-hero { grid-template-columns:1fr; grid-template-rows:auto 62svh; }
+  .celebrity-profile-hero > div { min-height:56svh; padding:70px 18px 24px; }
+  .celebrity-profile-hero h2 { font-size:19vw; }
+  .celebrity-profile-intro { grid-template-columns:1fr; }
+  .celebrity-profile-grid { display:block; padding:3px; }
+  .celebrity-profile-grid figure { margin-bottom:3px; }
+  .celebrity-profile-grid img { max-height:none; }
+  .celebrity-profile-credits { grid-template-columns:1fr; padding:20vw 18px; }
+  .celebrity-profile-credits div { grid-template-columns:1fr; margin-top:10vw; }
+}
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .project-image img { transition:none; } .hero-slide { animation:none; opacity:0; } .hero-slide:first-child { opacity:1; } }
 @media (max-width:760px) { .hero h1 > span:last-child { margin-left:4vw; margin-top:.08em; } }
 

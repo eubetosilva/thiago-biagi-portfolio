@@ -1,15 +1,25 @@
+"use client";
+
+import { useState } from 'react';
+
 const projects = [
-  { number: '01', title: 'Chay Suede', subtitle: 'Hermès · Prada · Brioni · Giorgio Armani', image: '/portfolio/chay-2026/01-chay-hermes-prada.jpg', alt: 'Chay Suede usando Hermès e Prada com styling de Thiago Biagi', note: 'Celebrity styling' },
-  { number: '02', title: 'Laura Neiva', subtitle: 'Celebrity styling', image: '/portfolio/celebrity-portrait/01.jpg', alt: 'Laura Neiva em retrato preto e branco com óculos', note: 'Celebrity styling' },
-  { number: '03', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier · Zerezes', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme usando Brioni, Cartier e Zerezes com styling de Thiago Biagi', note: 'Celebrity styling' },
-  { number: '04', title: 'Wagner Moura', subtitle: 'GQ Brasil · Dior', image: '/portfolio/instagram-full/wagner-moura.jpg', alt: 'Wagner Moura para GQ Brasil', note: 'Cover story' },
-  { number: '05', title: 'Kaká', subtitle: 'GQ Brasil · Fashion editorial', image: '/portfolio/instagram-full/kaka.jpg', alt: 'Kaká para GQ Brasil', note: 'Celebrity styling' },
-  { number: '06', title: 'Rodrigo Santoro', subtitle: 'Red carpet · Evening tailoring', image: '/portfolio/instagram-full/rodrigo-santoro.jpg', alt: 'Rodrigo Santoro em styling de gala', note: 'Celebrity styling' },
-  { number: '07', title: 'Agnes Nunes', subtitle: 'Music · Fashion portrait', image: '/portfolio/instagram-full/agnes-nunes.jpg', alt: 'Agnes Nunes em editorial musical', note: 'Image' },
-  { number: '08', title: 'João Vicente', subtitle: 'Dries Van Noten · Omega', image: '/portfolio/instagram/joao-vicente-gala.jpg', alt: 'João Vicente de Castro em styling de gala', note: 'Celebrity styling' },
-  { number: '09', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek-editorial.jpg', alt: 'Arthur Paek em editorial de alfaiataria', note: 'Celebrity styling' },
-  { number: '10', title: 'Isabelle Drummond', subtitle: 'Victoria Beckham · NK Store', image: '/portfolio/isabelle-drummond/01-victoria-beckham.jpg', alt: 'Isabelle Drummond usando Victoria Beckham com styling de Thiago Biagi', note: 'Celebrity styling' },
+  { number: '01', title: 'Marina Ruy Barbosa', subtitle: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/celebrities/marina-ruy-barbosa/01.jpg', alt: 'Marina Ruy Barbosa para Marie Claire Brasil com styling de Thiago Biagi', note: 'Celebrity study', study: 'marina' },
+  { number: '02', title: 'Chay Suede', subtitle: 'Hermès · Prada · Brioni · Giorgio Armani', image: '/portfolio/chay-2026/01-chay-hermes-prada.jpg', alt: 'Chay Suede usando Hermès e Prada com styling de Thiago Biagi', note: 'Celebrity styling' },
+  { number: '03', title: 'Laura Neiva', subtitle: 'Celebrity styling', image: '/portfolio/celebrity-portrait/01.jpg', alt: 'Laura Neiva em retrato preto e branco com óculos', note: 'Celebrity styling' },
+  { number: '04', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier · Zerezes', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme usando Brioni, Cartier e Zerezes com styling de Thiago Biagi', note: 'Celebrity styling' },
+  { number: '05', title: 'Wagner Moura', subtitle: 'GQ Brasil · Dior', image: '/portfolio/instagram-full/wagner-moura.jpg', alt: 'Wagner Moura para GQ Brasil', note: 'Cover story' },
+  { number: '06', title: 'Kaká', subtitle: 'GQ Brasil · Fashion editorial', image: '/portfolio/instagram-full/kaka.jpg', alt: 'Kaká para GQ Brasil', note: 'Celebrity styling' },
+  { number: '07', title: 'Rodrigo Santoro', subtitle: 'Red carpet · Evening tailoring', image: '/portfolio/instagram-full/rodrigo-santoro.jpg', alt: 'Rodrigo Santoro em styling de gala', note: 'Celebrity styling' },
+  { number: '08', title: 'Agnes Nunes', subtitle: 'Music · Fashion portrait', image: '/portfolio/instagram-full/agnes-nunes.jpg', alt: 'Agnes Nunes em editorial musical', note: 'Image' },
+  { number: '09', title: 'João Vicente', subtitle: 'Dries Van Noten · Omega', image: '/portfolio/instagram/joao-vicente-gala.jpg', alt: 'João Vicente de Castro em styling de gala', note: 'Celebrity styling' },
+  { number: '10', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek-editorial.jpg', alt: 'Arthur Paek em editorial de alfaiataria', note: 'Celebrity styling' },
+  { number: '11', title: 'Isabelle Drummond', subtitle: 'Victoria Beckham · NK Store', image: '/portfolio/isabelle-drummond/01-victoria-beckham.jpg', alt: 'Isabelle Drummond usando Victoria Beckham com styling de Thiago Biagi', note: 'Celebrity styling' },
 ];
+
+const marinaStudy = Array.from({ length: 9 }, (_, index) => ({
+  image: `/portfolio/celebrities/marina-ruy-barbosa/${String(index + 1).padStart(2, '0')}.jpg`,
+  alt: `Marina Ruy Barbosa para Marie Claire Brasil, imagem ${index + 1}`,
+}));
 
 const chayLooks = [
   ['/portfolio/chay-2026/01-chay-hermes-prada.jpg', 'Hermès · Prada'],
@@ -110,6 +120,7 @@ const covers = [
 export default function Home() {
   const [viewMode, setViewMode] = useState<'grid' | 'large'>('grid');
   const [openCover, setOpenCover] = useState<number | null>(null);
+  const [openCelebrity, setOpenCelebrity] = useState<string | null>(null);
 
   return (
     <main className={`site-view site-view-${viewMode}`}>
@@ -167,11 +178,16 @@ export default function Home() {
       </section>
 
       <section className="work" id="work">
-        <div className="section-heading"><p>Celebrity portfolio</p><span>01 — 10</span></div>
+        <div className="section-heading"><p>Celebrity portfolio</p><span>01 — 11</span></div>
         <div className="project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
-              <div className="project-image"><img src={project.image} alt={project.alt} loading="lazy" /></div>
+              {project.study ? (
+                <button type="button" className="project-image project-study-button" onClick={() => setOpenCelebrity(project.study)} aria-label={`Abrir o study de ${project.title}`}>
+                  <img src={project.image} alt={project.alt} loading="lazy" />
+                  <span>Ver study ↗</span>
+                </button>
+              ) : <div className="project-image"><img src={project.image} alt={project.alt} loading="lazy" /></div>}
               <div className="project-meta">
                 <span>{project.number}</span>
                 <div><h3>{project.title}</h3><p>{project.subtitle}</p></div>
@@ -180,6 +196,36 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {openCelebrity === 'marina' && (
+        <div className="celebrity-profile" role="dialog" aria-modal="true" aria-label="Study de Marina Ruy Barbosa">
+          <button type="button" className="celebrity-profile-close" onClick={() => setOpenCelebrity(null)}>Fechar ×</button>
+          <header className="celebrity-profile-hero">
+            <div>
+              <p>Celebrity study · 01</p>
+              <h2>Marina<br /><em>Ruy Barbosa</em></h2>
+              <div className="celebrity-profile-intro">
+                <span>Marie Claire Brasil</span>
+                <span>Setembro 2026</span>
+                <span>Styling · Thiago Biagi</span>
+              </div>
+            </div>
+            <figure><img src={marinaStudy[4].image} alt={marinaStudy[4].alt} /></figure>
+          </header>
+          <section className="celebrity-profile-grid" aria-label="Ensaio de Marina Ruy Barbosa">
+            {marinaStudy.map((item, index) => (
+              <figure key={item.image} className={`celebrity-profile-image celebrity-profile-image-${index + 1}`}>
+                <img src={item.image} alt={item.alt} loading={index < 2 ? 'eager' : 'lazy'} />
+                <figcaption>{String(index + 1).padStart(2, '0')} / Marie Claire Brasil</figcaption>
+              </figure>
+            ))}
+          </section>
+          <footer className="celebrity-profile-credits">
+            <p>Marina Ruy Barbosa / Marie Claire Brasil</p>
+            <div><span>Fotos · Ivan Erick</span><span>Direção criativa · João Pessoni</span><span>Direção de moda · Larissa Lucchese</span><span>Styling · Thiago Biagi</span><span>Beleza · Silvio Giorgio</span></div>
+          </footer>
+        </div>
+      )}
 
       <section className="lookbook" id="styling-study" aria-labelledby="lookbook-title">
         <div className="section-heading"><p id="lookbook-title">Chay Suede / Styling study</p><span>01 — 08</span></div>
@@ -318,6 +364,3 @@ export default function Home() {
     </main>
   );
 }
-"use client";
-
-import { useState } from 'react';
