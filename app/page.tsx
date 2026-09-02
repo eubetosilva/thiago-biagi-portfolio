@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const projects = [
   { number: '01', title: 'Marina Ruy Barbosa', subtitle: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/celebrities/marina-ruy-barbosa/01.jpg', alt: 'Marina Ruy Barbosa para Marie Claire Brasil com styling de Thiago Biagi', note: 'Celebrity study', study: 'marina' },
-  { number: '02', title: 'Chay Suede', subtitle: 'Hermès · Prada · Brioni · Giorgio Armani', image: '/portfolio/chay-2026/01-chay-hermes-prada.jpg', alt: 'Chay Suede usando Hermès e Prada com styling de Thiago Biagi', note: 'Celebrity styling' },
+  { number: '02', title: 'Chay Suede', subtitle: 'Hermès · Prada · Brioni · Giorgio Armani', image: '/portfolio/chay-2026/01-chay-hermes-prada.jpg', alt: 'Chay Suede usando Hermès e Prada com styling de Thiago Biagi', note: 'Celebrity study', study: 'chay' },
   { number: '03', title: 'Laura Neiva', subtitle: 'Celebrity styling', image: '/portfolio/celebrity-portrait/01.jpg', alt: 'Laura Neiva em retrato preto e branco com óculos', note: 'Celebrity styling' },
   { number: '04', title: 'João Guilherme', subtitle: 'Prime Video · Brioni · Cartier · Zerezes', image: '/portfolio/joao-guilherme.jpg', alt: 'João Guilherme usando Brioni, Cartier e Zerezes com styling de Thiago Biagi', note: 'Celebrity styling' },
   { number: '05', title: 'Wagner Moura', subtitle: 'GQ Brasil · Dior', image: '/portfolio/instagram-full/wagner-moura.jpg', alt: 'Wagner Moura para GQ Brasil', note: 'Cover story' },
@@ -223,6 +223,36 @@ export default function Home() {
           <footer className="celebrity-profile-credits">
             <p>Marina Ruy Barbosa / Marie Claire Brasil</p>
             <div><span>Fotos · Ivan Erick</span><span>Direção criativa · João Pessoni</span><span>Direção de moda · Larissa Lucchese</span><span>Styling · Thiago Biagi</span><span>Beleza · Silvio Giorgio</span></div>
+          </footer>
+        </div>
+      )}
+
+      {openCelebrity === 'chay' && (
+        <div className="celebrity-profile celebrity-profile-chay" role="dialog" aria-modal="true" aria-label="Study de Chay Suede">
+          <button type="button" className="celebrity-profile-close" onClick={() => setOpenCelebrity(null)}>Fechar ×</button>
+          <header className="celebrity-profile-hero">
+            <div>
+              <p>Celebrity study · 02</p>
+              <h2>Chay<br /><em>Suede</em></h2>
+              <div className="celebrity-profile-intro">
+                <span>Celebrity styling</span>
+                <span>São Paulo · 2026</span>
+                <span>Styling · Thiago Biagi</span>
+              </div>
+            </div>
+            <figure><img src={chayLooks[0][0]} alt="Chay Suede usando Hermès e Prada com styling de Thiago Biagi" /></figure>
+          </header>
+          <section className="celebrity-profile-grid" aria-label="Looks de Chay Suede">
+            {chayLooks.map(([image, brands], index) => (
+              <figure key={image} className={`celebrity-profile-image celebrity-profile-image-${index + 1}`}>
+                <img src={image} alt={`Chay Suede usando ${brands}`} loading={index < 2 ? 'eager' : 'lazy'} />
+                <figcaption>{String(index + 1).padStart(2, '0')} / {brands}</figcaption>
+              </figure>
+            ))}
+          </section>
+          <footer className="celebrity-profile-credits">
+            <p>Chay Suede / Celebrity styling</p>
+            <div><span>Styling · Thiago Biagi</span><span>Hermès · Prada</span><span>Brioni · Giorgio Armani</span><span>Salustiano Brasil</span><span>Officine Creative</span></div>
           </footer>
         </div>
       )}
