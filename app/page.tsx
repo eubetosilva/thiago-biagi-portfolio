@@ -146,13 +146,6 @@ export default function Home() {
 
       <section className="marina-covers-post" aria-labelledby="marina-covers-title">
         <div className="section-heading"><p id="marina-covers-title">Marina Ruy Barbosa / Marie Claire Brasil</p><span>Setembro 2026</span></div>
-        <div className="marina-covers-intro">
-          <h2>Diante<br />do espelho</h2>
-          <div>
-            <p>Depois de crescer sob o olhar público, Marina Ruy Barbosa celebra 23 anos de carreira e fala sobre amadurecimento, transformação e uma relação mais gentil com a própria imagem.</p>
-            <a href="https://revistamarieclaire.globo.com/moda/noticia/2026/09/marina-ruy-barbosa-tenho-orgulho-de-ter-construido-uma-carreira-um-patrimonio-e-a-minha-identidade.ghtml" target="_blank" rel="noreferrer">Entrevista completa na Marie Claire ↗</a>
-          </div>
-        </div>
         <div className="marina-covers-pair">
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg" alt="Primeira capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>01</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg" alt="Segunda capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>02</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>

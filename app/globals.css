@@ -43,11 +43,7 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .hero-reel span { display:block; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,.55); font-size:8px; text-transform:uppercase; letter-spacing:.14em; text-shadow:0 1px 10px rgba(0,0,0,.7); }
 .image-wall { display:grid; grid-template-columns:repeat(12,1fr); gap:4px; padding:4px; background:#fff; }
 .marina-covers-post { padding:8vw 2.7vw 10vw; background:#fff; }
-.marina-covers-intro { display:grid; grid-template-columns:1.2fr .8fr; gap:8vw; align-items:end; margin:5vw 0 6vw; }
-.marina-covers-intro h2 { margin:0; font-family:Georgia,'Times New Roman',serif; font-size:clamp(72px,10vw,154px); font-weight:400; line-height:.82; letter-spacing:-.06em; }
-.marina-covers-intro p { max-width:470px; margin:0 0 24px; font-size:15px; line-height:1.55; color:#55534f; }
-.marina-covers-intro a { display:inline-block; padding-bottom:4px; border-bottom:1px solid #111; font-size:9px; text-transform:uppercase; letter-spacing:.12em; }
-.marina-covers-pair { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; }
+.marina-covers-pair { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; margin-top:4vw; }
 .marina-covers-pair figure { margin:0; }
 .marina-covers-pair figure:nth-child(2) { margin-top:8vw; }
 .marina-covers-pair img { width:100%; height:auto; display:block; }
@@ -136,10 +132,7 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .hero-reel span { font-size:6px; }
   .image-wall { grid-template-columns:1fr; gap:3px; padding:3px; }
   .marina-covers-post { padding:24vw 18px; }
-  .marina-covers-intro { display:block; margin:14vw 0 18vw; }
-  .marina-covers-intro h2 { margin:0 0 12vw; font-size:19vw; }
-  .marina-covers-intro p { font-size:13px; }
-  .marina-covers-pair { gap:4px; }
+  .marina-covers-pair { gap:4px; margin-top:12vw; }
   .marina-covers-pair figure:nth-child(2) { margin-top:12vw; }
   .marina-covers-pair figcaption { grid-template-columns:22px 1fr; gap:4px; font-size:6px; }
   .marina-editorial-strip { grid-template-columns:1fr 1fr; margin-top:20vw; }
