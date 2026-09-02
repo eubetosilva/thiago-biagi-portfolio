@@ -10,7 +10,7 @@ const projects = [
   { number: '05', title: 'Wagner Moura', subtitle: 'GQ Brasil · Dior', image: '/portfolio/instagram-full/wagner-moura.jpg', alt: 'Wagner Moura para GQ Brasil', note: 'Cover story' },
   { number: '06', title: 'Kaká', subtitle: 'GQ Brasil · Fashion editorial', image: '/portfolio/instagram-full/kaka.jpg', alt: 'Kaká para GQ Brasil', note: 'Celebrity styling' },
   { number: '07', title: 'Rodrigo Santoro', subtitle: 'Red carpet · Evening tailoring', image: '/portfolio/instagram-full/rodrigo-santoro.jpg', alt: 'Rodrigo Santoro em styling de gala', note: 'Celebrity styling' },
-  { number: '08', title: 'Agnes Nunes', subtitle: 'Music · Fashion portrait', image: '/portfolio/instagram-full/agnes-nunes.jpg', alt: 'Agnes Nunes em editorial musical', note: 'Image' },
+  { number: '08', title: 'Agnes Nunes', subtitle: 'Mondepars · Fashion film', image: '/portfolio/instagram-full/agnes-nunes.jpg', alt: 'Agnes Nunes em editorial musical', note: 'Celebrity study', study: 'agnes' },
   { number: '09', title: 'João Vicente', subtitle: 'Dries Van Noten · Omega', image: '/portfolio/instagram/joao-vicente-gala.jpg', alt: 'João Vicente de Castro em styling de gala', note: 'Celebrity styling' },
   { number: '10', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek-editorial.jpg', alt: 'Arthur Paek em editorial de alfaiataria', note: 'Celebrity styling' },
   { number: '11', title: 'Isabelle Drummond', subtitle: 'Victoria Beckham · NK Store', image: '/portfolio/isabelle-drummond/01-victoria-beckham.jpg', alt: 'Isabelle Drummond usando Victoria Beckham com styling de Thiago Biagi', note: 'Celebrity styling' },
@@ -257,17 +257,41 @@ export default function Home() {
         </div>
       )}
 
-      <section className="agnes-study" id="agnes-mondepars" aria-labelledby="agnes-title">
-        <div className="section-heading"><p id="agnes-title">Agnes Nunes / Mondepars</p><span>01 — 03</span></div>
-        <div className="agnes-grid">
-          <figure className="agnes-film">
-            <video src="/portfolio/agnes-mondepars/film.mp4" autoPlay muted loop playsInline controls preload="metadata" aria-label="Fashion film de Agnes Nunes usando Mondepars" />
-            <figcaption>01 / Fashion film</figcaption>
-          </figure>
-          <figure><img src="/portfolio/agnes-mondepars/01.jpg" alt="Agnes Nunes usando Mondepars em retrato de perfil" loading="lazy" /><figcaption>02 / Agnes Nunes · Mondepars</figcaption></figure>
-          <figure><img src="/portfolio/agnes-mondepars/02.jpg" alt="Agnes Nunes usando Mondepars em retrato frontal" loading="lazy" /><figcaption>03 / Agnes Nunes · Mondepars</figcaption></figure>
+      {openCelebrity === 'agnes' && (
+        <div className="celebrity-profile celebrity-profile-agnes" role="dialog" aria-modal="true" aria-label="Study de Agnes Nunes">
+          <button type="button" className="celebrity-profile-close" onClick={() => setOpenCelebrity(null)}>Fechar ×</button>
+          <header className="celebrity-profile-hero">
+            <div>
+              <p>Celebrity study · 08</p>
+              <h2>Agnes<br /><em>Nunes</em></h2>
+              <div className="celebrity-profile-intro">
+                <span>Mondepars</span>
+                <span>Fashion film</span>
+                <span>Styling · Thiago Biagi</span>
+              </div>
+            </div>
+            <figure><img src="/portfolio/agnes-mondepars/01.jpg" alt="Agnes Nunes usando Mondepars em retrato de perfil" /></figure>
+          </header>
+          <section className="celebrity-profile-grid" aria-label="Ensaio de Agnes Nunes para Mondepars">
+            <figure className="celebrity-profile-image celebrity-profile-film">
+              <video src="/portfolio/agnes-mondepars/film.mp4" autoPlay muted loop playsInline controls preload="metadata" aria-label="Fashion film de Agnes Nunes usando Mondepars" />
+              <figcaption>01 / Fashion film</figcaption>
+            </figure>
+            <figure className="celebrity-profile-image celebrity-profile-image-2">
+              <img src="/portfolio/agnes-mondepars/01.jpg" alt="Agnes Nunes usando Mondepars em retrato de perfil" loading="eager" />
+              <figcaption>02 / Agnes Nunes · Mondepars</figcaption>
+            </figure>
+            <figure className="celebrity-profile-image celebrity-profile-image-3">
+              <img src="/portfolio/agnes-mondepars/02.jpg" alt="Agnes Nunes usando Mondepars em retrato frontal" loading="lazy" />
+              <figcaption>03 / Agnes Nunes · Mondepars</figcaption>
+            </figure>
+          </section>
+          <footer className="celebrity-profile-credits">
+            <p>Agnes Nunes / Mondepars</p>
+            <div><span>Celebrity styling</span><span>Styling · Thiago Biagi</span><span>Fashion film</span><span>Mondepars</span></div>
+          </footer>
         </div>
-      </section>
+      )}
 
       <section className="miss-dior-study" id="miss-dior" aria-labelledby="miss-dior-title">
         <div className="section-heading"><p id="miss-dior-title">Miss Dior / Editorial</p><span>01 — 12</span></div>

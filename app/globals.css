@@ -26,7 +26,7 @@
 .celebrity-profile-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:4px; padding:4px; background:#fff; }
 .celebrity-profile-grid figure { grid-column:span 6; margin:0; min-width:0; background:#eee; }
 .celebrity-profile-grid figure:nth-child(3n) { grid-column:span 12; }
-.celebrity-profile-grid img { width:100%; height:auto; max-height:96svh; object-fit:contain; background:#f5f4ef; }
+.celebrity-profile-grid img,.celebrity-profile-grid video { display:block; width:100%; height:auto; max-height:96svh; object-fit:contain; background:#f5f4ef; }
 .celebrity-profile-grid figcaption { padding:10px 8px 34px; color:#111; background:#fff; font-size:8px; text-transform:uppercase; letter-spacing:.13em; }
 .celebrity-profile-credits { display:grid; grid-template-columns:1fr 2fr; gap:5vw; padding:7vw 2.7vw; color:#fff; background:#151515; border:0; }
 .celebrity-profile-credits p { margin:0; font-family:Georgia,serif; font-size:clamp(34px,4vw,64px); line-height:.95; }
