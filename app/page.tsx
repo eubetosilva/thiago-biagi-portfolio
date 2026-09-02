@@ -132,7 +132,7 @@ export default function Home() {
             <h1>Thiago Biagi</h1>
             <div className="hero-details">
               <div><strong>Inside</strong><span>Celebrity styling</span><span>Editorial stories</span><span>Magazine covers</span></div>
-              <div><strong>Bookings</strong><a href="mailto:thiago.biagi@onyn.com.br">thiago.biagi@onyn.com.br</a><a href="https://www.instagram.com/thiagobiagi/" target="_blank" rel="noreferrer">Instagram @thiagobiagi ↗</a><a href="https://www.tiktok.com/@thiagobiagi" target="_blank" rel="noreferrer">TikTok @thiagobiagi ↗</a></div>
+              <div><strong>Bookings</strong><a href="mailto:thiago.biagi1@gmail.com">thiago.biagi1@gmail.com</a><a href="https://www.instagram.com/thiagobiagi/" target="_blank" rel="noreferrer">Instagram @thiagobiagi ↗</a><a href="https://www.tiktok.com/@thiagobiagi" target="_blank" rel="noreferrer">TikTok @thiagobiagi ↗</a></div>
             </div>
           </div>
         </div>
@@ -307,10 +307,10 @@ export default function Home() {
       <section className="contact" id="contact">
         <p className="eyebrow">Bookings / Contact</p>
         <div className="contact-row">
-          <a href="mailto:thiago.biagi@onyn.com.br">thiago.biagi@onyn.com.br ↗</a>
+          <a href="mailto:thiago.biagi1@gmail.com">thiago.biagi1@gmail.com ↗</a>
           <a href="https://www.instagram.com/thiagobiagi/" target="_blank" rel="noreferrer">@thiagobiagi ↗</a>
           <a href="https://www.tiktok.com/@thiagobiagi" target="_blank" rel="noreferrer">TikTok @thiagobiagi ↗</a>
-          <p>Beltrame Management<br />São Paulo, Brasil</p>
+          <a href="https://www.beltramemgmt.com/" target="_blank" rel="noreferrer">Beltrame Management ↗<br />São Paulo, Brasil</a>
         </div>
       </section>
 
