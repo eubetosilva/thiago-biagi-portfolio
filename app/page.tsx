@@ -127,7 +127,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top">THIAGO BIAGI</a>
         <nav aria-label="Navegação principal">
-          <a href="#work">Portfolio</a><a href="#work">Celebrities</a><a href="#styling-study">Styling Study</a><a href="#motion">Motion</a><a href="#magazine">Magazine</a><a href="#about">Sobre</a><a href="#contact">Contato</a>
+          <a href="#work">Portfolio</a><a href="#work">Celebrities</a><a href="#motion">Motion</a><a href="#magazine">Magazine</a><a href="#about">Sobre</a><a href="#contact">Contato</a>
         </nav>
         <div className="view-options" aria-label="Opções de visualização">
           <button type="button" className={viewMode === 'grid' ? 'active' : ''} aria-pressed={viewMode === 'grid'} onClick={() => setViewMode('grid')}>Grid</button>
@@ -256,23 +256,6 @@ export default function Home() {
           </footer>
         </div>
       )}
-
-      <section className="lookbook" id="styling-study" aria-labelledby="lookbook-title">
-        <div className="section-heading"><p id="lookbook-title">Chay Suede / Styling study</p><span>01 — 08</span></div>
-        <div className="lookbook-grid">
-          {chayLooks.map(([image, brands], index) => (
-            <figure key={image}>
-              <img src={image} alt={`Chay Suede usando ${brands}`} loading="lazy" />
-              <figcaption><span>{String(index + 1).padStart(2, '0')}</span><p>{brands}</p></figcaption>
-            </figure>
-          ))}
-        </div>
-        <aside className="lookbook-press">
-          <span>Chay Suede / Fashion context</span>
-          <p>Além da atuação, Chay desenvolve uma marca de moda autoral ligada à memória de seu avô.</p>
-          <a href="https://oglobo.globo.com/ela/gente/noticia/2026/08/09/chay-suede-fala-sobre-paternidade-fe-e-marca-de-moda-que-homenageia-o-avo.ghtml" target="_blank" rel="noreferrer">Leia no O Globo ↗</a>
-        </aside>
-      </section>
 
       <section className="agnes-study" id="agnes-mondepars" aria-labelledby="agnes-title">
         <div className="section-heading"><p id="agnes-title">Agnes Nunes / Mondepars</p><span>01 — 03</span></div>
