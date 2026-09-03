@@ -127,7 +127,7 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top">THIAGO BIAGI</a>
         <nav aria-label="Navegação principal">
-          <a href="#work">Portfolio</a><a href="#work">Celebrities</a><a href="#motion">Motion</a><a href="#magazine">Magazine</a><a href="#about">Sobre</a><a href="#contact">Contato</a>
+          <a href="#portfolio">Portfolio</a><a href="#work">Celebrities</a><a href="#motion">Motion</a><a href="#magazine">Magazine</a><a href="#about">Sobre</a><a href="#contact">Contato</a>
         </nav>
         <div className="view-options" aria-label="Opções de visualização">
           <button type="button" className={viewMode === 'grid' ? 'active' : ''} aria-pressed={viewMode === 'grid'} onClick={() => setViewMode('grid')}>Grid</button>
@@ -163,17 +163,76 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+        <div className="section-heading portfolio-heading"><p id="portfolio-title">Portfolio / Editorials &amp; campaigns</p><span>Selected work</span></div>
       <section className="image-wall" aria-label="Galeria editorial">
         {galleryImages.map(([src, alt], index) => (
           <figure key={src} className={`wall-image wall-image-${index + 1}`}>
             <img src={src} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} />
-            <figcaption><span>{String(index + 1).padStart(2, '0')}</span><p>{alt}</p></figcaption>
           </figure>
         ))}
       </section>
 
+      <section className="miss-dior-study" id="miss-dior" aria-labelledby="miss-dior-title">
+        <div className="section-heading"><p id="miss-dior-title">Miss Dior / Editorial</p><span>01 — 12</span></div>
+        <div className="miss-dior-grid">
+          {missDiorFilms.map((film, index) => (
+            <figure className="miss-dior-film" key={film}>
+              <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film Miss Dior ${index + 1}`} />
+              <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
+            </figure>
+          ))}
+          {missDiorImages.map(([image, alt], index) => (
+            <figure key={image}>
+              <img src={image} alt={alt} loading="lazy" />
+              <figcaption>{String(index + 5).padStart(2, '0')} / Miss Dior</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="piet-study" id="piet" aria-labelledby="piet-title">
+        <div className="section-heading"><p id="piet-title">PIET + Riachuelo / Campaign study</p><span>01 — 20</span></div>
+        <div className="piet-grid">
+          {pietRiachueloFilms.map((film, index) => (
+            <figure className="piet-film" key={film}>
+              <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film PIET + Riachuelo ${index + 1}`} />
+              <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
+            </figure>
+          ))}
+          {pietRiachueloImages.map(([image, alt], index) => (
+            <figure key={image}>
+              <img src={image} alt={alt} loading="lazy" />
+              <figcaption>{String(index + 3).padStart(2, '0')} / Campaign</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="chapter-study" id="capitulo-final" aria-labelledby="chapter-title">
+        <div className="section-heading"><p id="chapter-title">Capítulo Final / Numéro Netherlands</p><span>01 — 09</span></div>
+        <div className="chapter-grid">
+          {capituloFinal.map(([image, alt], index) => (
+            <figure key={image}>
+              <img src={image} alt={alt} loading="lazy" />
+              <figcaption>{String(index + 1).padStart(2, '0')} / Editorial</figcaption>
+            </figure>
+          ))}
+        </div>
+        <details className="chapter-credits-panel">
+          <summary><span>Créditos</span><span>Ver ficha técnica +</span></summary>
+          <div className="chapter-credits">
+            <div><p>Creative director <a href="https://www.instagram.com/amaurineto_/" target="_blank" rel="noreferrer">@amaurineto_</a></p><p>DOP &amp; film colorist <a href="https://www.instagram.com/pedropmaciel/" target="_blank" rel="noreferrer">@pedropmaciel</a></p><p>Photography <a href="https://www.instagram.com/hudsonrennan/" target="_blank" rel="noreferrer">@hudsonrennan</a></p><p>Styling <a href="https://www.instagram.com/thiagobiagi/" target="_blank" rel="noreferrer">@thiagobiagi</a></p><p>Hair <a href="https://www.instagram.com/shady_jordan/" target="_blank" rel="noreferrer">@shady_jordan</a></p><p>Makeup <a href="https://www.instagram.com/holland.vision/" target="_blank" rel="noreferrer">@holland.vision</a></p></div>
+            <div><p>Set designer <a href="https://www.instagram.com/cenna_visualecenografia/" target="_blank" rel="noreferrer">@cenna_visualecenografia</a></p><p>Studio <a href="https://www.instagram.com/studio_photo_3/" target="_blank" rel="noreferrer">@studio_photo_3</a></p><p>Models <a href="https://www.instagram.com/anick_chan/" target="_blank" rel="noreferrer">@anick_chan</a>, <a href="https://www.instagram.com/fabiomori_/" target="_blank" rel="noreferrer">@fabiomori_</a>, <a href="https://www.instagram.com/maximorodriguezzz/" target="_blank" rel="noreferrer">@maximorodriguezzz</a></p><p>Agency <a href="https://www.instagram.com/waymodel/" target="_blank" rel="noreferrer">@waymodel</a></p><p>Background <a href="https://www.instagram.com/iurilis/" target="_blank" rel="noreferrer">@iurilis</a></p><p>Photography assistant <a href="https://www.instagram.com/fernandobentes/" target="_blank" rel="noreferrer">@fernandobentes</a></p><p>Retouching <a href="https://www.instagram.com/vetroretouching/" target="_blank" rel="noreferrer">@vetroretouching</a></p></div>
+            <div><p>Styling assistance <a href="https://www.instagram.com/lauraduter/" target="_blank" rel="noreferrer">@lauraduter</a>, <a href="https://www.instagram.com/guilhermo_lima/" target="_blank" rel="noreferrer">@guilhermo_lima</a></p><p>Hair assistance <a href="https://www.instagram.com/kevinkinno/" target="_blank" rel="noreferrer">@kevinkinno</a></p><p>1AC <a href="https://www.instagram.com/hanhan.h4n/" target="_blank" rel="noreferrer">@hanhan.h4n</a></p><p>Film editors <a href="https://www.instagram.com/serzi.o/" target="_blank" rel="noreferrer">@serzi.o</a>, <a href="https://www.instagram.com/denyscoast/" target="_blank" rel="noreferrer">@denyscoast</a></p><p>Sound design <a href="https://www.instagram.com/baroqueangel_/" target="_blank" rel="noreferrer">@baroqueangel_</a></p><p>Set designer assistance <a href="https://www.instagram.com/danidibphoto/" target="_blank" rel="noreferrer">@danidibphoto</a>, <a href="https://www.instagram.com/patrickkferreira/" target="_blank" rel="noreferrer">@patrickkferreira</a>, <a href="https://www.instagram.com/bruno.alves8618/" target="_blank" rel="noreferrer">@bruno.alves8618</a></p></div>
+          </div>
+        </details>
+      </section>
+
+      </section>
+
       <section className="work" id="work">
-        <div className="section-heading"><p>Celebrity portfolio</p><span>01 — 11</span></div>
+        <div className="section-heading"><p>Celebrities</p><span>01 — 11</span></div>
         <div className="project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
@@ -287,62 +346,6 @@ export default function Home() {
           </footer>
         </div>
       )}
-
-      <section className="miss-dior-study" id="miss-dior" aria-labelledby="miss-dior-title">
-        <div className="section-heading"><p id="miss-dior-title">Miss Dior / Editorial</p><span>01 — 12</span></div>
-        <div className="miss-dior-grid">
-          {missDiorFilms.map((film, index) => (
-            <figure className="miss-dior-film" key={film}>
-              <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film Miss Dior ${index + 1}`} />
-              <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
-            </figure>
-          ))}
-          {missDiorImages.map(([image, alt], index) => (
-            <figure key={image}>
-              <img src={image} alt={alt} loading="lazy" />
-              <figcaption>{String(index + 5).padStart(2, '0')} / Miss Dior</figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section className="piet-study" id="piet" aria-labelledby="piet-title">
-        <div className="section-heading"><p id="piet-title">PIET + Riachuelo / Campaign study</p><span>01 — 20</span></div>
-        <div className="piet-grid">
-          {pietRiachueloFilms.map((film, index) => (
-            <figure className="piet-film" key={film}>
-              <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film PIET + Riachuelo ${index + 1}`} />
-              <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
-            </figure>
-          ))}
-          {pietRiachueloImages.map(([image, alt], index) => (
-            <figure key={image}>
-              <img src={image} alt={alt} loading="lazy" />
-              <figcaption>{String(index + 3).padStart(2, '0')} / Campaign</figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section className="chapter-study" id="capitulo-final" aria-labelledby="chapter-title">
-        <div className="section-heading"><p id="chapter-title">Capítulo Final / Numéro Netherlands</p><span>01 — 09</span></div>
-        <div className="chapter-grid">
-          {capituloFinal.map(([image, alt], index) => (
-            <figure key={image}>
-              <img src={image} alt={alt} loading="lazy" />
-              <figcaption>{String(index + 1).padStart(2, '0')} / Editorial</figcaption>
-            </figure>
-          ))}
-        </div>
-        <details className="chapter-credits-panel">
-          <summary><span>Créditos</span><span>Ver ficha técnica +</span></summary>
-          <div className="chapter-credits">
-            <div><p>Creative director <a href="https://www.instagram.com/amaurineto_/" target="_blank" rel="noreferrer">@amaurineto_</a></p><p>DOP &amp; film colorist <a href="https://www.instagram.com/pedropmaciel/" target="_blank" rel="noreferrer">@pedropmaciel</a></p><p>Photography <a href="https://www.instagram.com/hudsonrennan/" target="_blank" rel="noreferrer">@hudsonrennan</a></p><p>Styling <a href="https://www.instagram.com/thiagobiagi/" target="_blank" rel="noreferrer">@thiagobiagi</a></p><p>Hair <a href="https://www.instagram.com/shady_jordan/" target="_blank" rel="noreferrer">@shady_jordan</a></p><p>Makeup <a href="https://www.instagram.com/holland.vision/" target="_blank" rel="noreferrer">@holland.vision</a></p></div>
-            <div><p>Set designer <a href="https://www.instagram.com/cenna_visualecenografia/" target="_blank" rel="noreferrer">@cenna_visualecenografia</a></p><p>Studio <a href="https://www.instagram.com/studio_photo_3/" target="_blank" rel="noreferrer">@studio_photo_3</a></p><p>Models <a href="https://www.instagram.com/anick_chan/" target="_blank" rel="noreferrer">@anick_chan</a>, <a href="https://www.instagram.com/fabiomori_/" target="_blank" rel="noreferrer">@fabiomori_</a>, <a href="https://www.instagram.com/maximorodriguezzz/" target="_blank" rel="noreferrer">@maximorodriguezzz</a></p><p>Agency <a href="https://www.instagram.com/waymodel/" target="_blank" rel="noreferrer">@waymodel</a></p><p>Background <a href="https://www.instagram.com/iurilis/" target="_blank" rel="noreferrer">@iurilis</a></p><p>Photography assistant <a href="https://www.instagram.com/fernandobentes/" target="_blank" rel="noreferrer">@fernandobentes</a></p><p>Retouching <a href="https://www.instagram.com/vetroretouching/" target="_blank" rel="noreferrer">@vetroretouching</a></p></div>
-            <div><p>Styling assistance <a href="https://www.instagram.com/lauraduter/" target="_blank" rel="noreferrer">@lauraduter</a>, <a href="https://www.instagram.com/guilhermo_lima/" target="_blank" rel="noreferrer">@guilhermo_lima</a></p><p>Hair assistance <a href="https://www.instagram.com/kevinkinno/" target="_blank" rel="noreferrer">@kevinkinno</a></p><p>1AC <a href="https://www.instagram.com/hanhan.h4n/" target="_blank" rel="noreferrer">@hanhan.h4n</a></p><p>Film editors <a href="https://www.instagram.com/serzi.o/" target="_blank" rel="noreferrer">@serzi.o</a>, <a href="https://www.instagram.com/denyscoast/" target="_blank" rel="noreferrer">@denyscoast</a></p><p>Sound design <a href="https://www.instagram.com/baroqueangel_/" target="_blank" rel="noreferrer">@baroqueangel_</a></p><p>Set designer assistance <a href="https://www.instagram.com/danidibphoto/" target="_blank" rel="noreferrer">@danidibphoto</a>, <a href="https://www.instagram.com/patrickkferreira/" target="_blank" rel="noreferrer">@patrickkferreira</a>, <a href="https://www.instagram.com/bruno.alves8618/" target="_blank" rel="noreferrer">@bruno.alves8618</a></p></div>
-          </div>
-        </details>
-      </section>
 
       <section className="motion-clean" id="motion" aria-label="Fashion films">
         <div className="section-heading"><p>Motion / Fashion films</p><span>01 — 08</span></div>
