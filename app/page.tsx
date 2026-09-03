@@ -161,11 +161,6 @@ export default function Home() {
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg" alt="Primeira capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>01</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg" alt="Segunda capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>02</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
         </div>
-        <div className="marina-editorial-strip">
-          <figure><img src="/portfolio/magazine-covers/marina-editorial-01.jpg" alt="Marina Ruy Barbosa em ensaio para a Marie Claire Brasil" /><figcaption>Ensaio / Marie Claire Brasil</figcaption></figure>
-          <figure><img src="/portfolio/magazine-covers/marina-editorial-02.jpg" alt="Retrato editorial de Marina Ruy Barbosa" /><figcaption>Fotos / Ivan Erick — Thinkers Mgmt</figcaption></figure>
-          <figure><img src="/portfolio/magazine-covers/marina-editorial-03.jpg" alt="Marina Ruy Barbosa em retrato do ensaio de setembro de 2026" /><figcaption>Setembro 2026</figcaption></figure>
-        </div>
       </section>
 
       <section className="image-wall" aria-label="Galeria editorial">
