@@ -106,15 +106,21 @@ const motion = [
 
 const covers = [
   { title: 'Marina Ruy Barbosa', publication: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg', alt: 'Capa da Marie Claire Brasil de setembro de 2026 com Marina Ruy Barbosa', story: ['/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg', '/portfolio/magazine-covers/marina-editorial-01.jpg', '/portfolio/magazine-covers/marina-editorial-02.jpg', '/portfolio/magazine-covers/marina-editorial-03.jpg'] },
-  { title: 'João Guilherme', publication: 'GQ Brasil · Men of the Year 2024', image: '/portfolio/magazine-covers/SaveVid.Net_469257802_18478644646027380_1905629404697638516_n.jpg', alt: 'Capa da GQ Brasil com João Guilherme', story: ['/portfolio/joao-guilherme.jpg'] },
+  { title: 'Kaká', publication: 'GQ Brasil · Maio 2026 · Dolce & Gabbana', image: '/portfolio/magazine-covers/01-gq-dolce-gabbana.jpg', alt: 'Capa da GQ Brasil com Kaká', story: ['/portfolio/instagram-full/kaka.jpg'] },
+  { title: 'Kaká', publication: 'GQ Brasil · Maio 2026 · Capa alternativa', image: '/portfolio/magazine-covers/02-gq-dolce-gabbana.jpg', alt: 'Capa alternativa da GQ Brasil com Kaká', story: ['/portfolio/instagram-full/kaka.jpg'] },
+  { title: 'Pedro Novaes', publication: 'Harper’s Bazaar Man Brasil · Maio 2026', image: '/portfolio/magazine-covers/snapinsta-1788229422354.jpg', alt: 'Capa da Harper’s Bazaar Man Brasil com Pedro Novaes', story: [] },
+  { title: 'Wagner Moura', publication: 'GQ Brasil · Dezembro 2025 / Janeiro 2026 · Dior', image: '/portfolio/magazine-covers/03-gq-dior.jpg', alt: 'Capa da GQ Brasil com Wagner Moura', story: ['/portfolio/instagram-full/wagner-moura.jpg'] },
   { title: 'Fabio Porchat', publication: 'GQ Brasil · Creativity Awards 2025', image: '/portfolio/magazine-covers/SaveVid.Net_497871643_18509216137027380_8014493567002082460_n.jpg', alt: 'Capa da GQ Brasil com Fabio Porchat', story: [] },
-  { title: 'Arthur Paek', publication: "L’Officiel Hommes Brasil", image: '/portfolio/magazine-covers/SaveVid.Net_502357379_18518750551027380_5881339525250106580_n.jpg', alt: 'Capa da L’Officiel Hommes Brasil com Arthur Paek', story: ['/portfolio/instagram-full/arthur-paek-editorial.jpg'] },
-  { title: 'Pedro Novaes', publication: "Harper’s Bazaar Man Brasil", image: '/portfolio/magazine-covers/snapinsta-1788229422354.jpg', alt: 'Capa da Harper’s Bazaar Man Brasil com Pedro Novaes', story: [] },
-  { title: 'Rodrigo Santoro', publication: 'Harper’s Bazaar Man · Poesia de Verão', image: '/portfolio/magazine-covers/snapinsta-1788229453666.jpg', alt: 'Capa da Harper’s Bazaar Man com Rodrigo Santoro', story: ['/portfolio/instagram-full/rodrigo-santoro.jpg'] },
-  { title: 'Wagner Moura', publication: 'GQ Brasil · Men of the Year · Dior', image: '/portfolio/magazine-covers/03-gq-dior.jpg', alt: 'Capa da GQ Brasil com Wagner Moura', story: ['/portfolio/instagram-full/wagner-moura.jpg'] },
-  { title: 'Chay Suede', publication: 'GQ Brasil · Gucci', image: '/portfolio/magazine-covers/04-gq-gucci-chay.jpg', alt: 'Capa da GQ Brasil com Chay Suede', story: ['/portfolio/chay-2026/01-chay-hermes-prada.jpg'] },
-  { title: 'Kaká', publication: 'GQ Brasil · Dolce & Gabbana', image: '/portfolio/magazine-covers/01-gq-dolce-gabbana.jpg', alt: 'Capa da GQ Brasil com Kaká', story: ['/portfolio/instagram-full/kaka.jpg'] },
-  { title: 'Kaká', publication: 'GQ Brasil · Capa alternativa', image: '/portfolio/magazine-covers/02-gq-dolce-gabbana.jpg', alt: 'Capa alternativa da GQ Brasil com Kaká', story: ['/portfolio/instagram-full/kaka.jpg'] },
+  { title: 'Arthur Paek', publication: "L’Officiel Hommes Brasil · Fevereiro 2025", image: '/portfolio/magazine-covers/SaveVid.Net_502357379_18518750551027380_5881339525250106580_n.jpg', alt: 'Capa da L’Officiel Hommes Brasil com Arthur Paek', story: ['/portfolio/instagram-full/arthur-paek-editorial.jpg'] },
+  { title: 'Chay Suede', publication: 'GQ Brasil · Março 2025 · Gucci', image: '/portfolio/magazine-covers/04-gq-gucci-chay.jpg', alt: 'Capa da GQ Brasil com Chay Suede', story: ['/portfolio/chay-2026/01-chay-hermes-prada.jpg'] },
+  { title: 'Jão', publication: 'Harper’s Bazaar Man Brasil · Novembro 2024', image: '/portfolio/magazine-covers/2024-jao-bazaar-man.jpg', alt: 'Capa da Harper’s Bazaar Man Brasil com Jão', story: [] },
+  { title: 'Show-Guys', publication: 'Harper’s Bazaar Man Brasil · Abril 2024', image: '/portfolio/magazine-covers/2024-show-guys-bazaar-man.jpg', alt: 'Capa Show-Guys da Harper’s Bazaar Man Brasil', story: [] },
+  { title: 'João Guilherme', publication: 'GQ Brasil · Men of the Year 2024', image: '/portfolio/magazine-covers/SaveVid.Net_469257802_18478644646027380_1905629404697638516_n.jpg', alt: 'Capa da GQ Brasil com João Guilherme', story: ['/portfolio/joao-guilherme.jpg'] },
+  { title: 'Rodrigo Santoro', publication: 'Harper’s Bazaar Man · Dezembro 2024 · Poesia de Verão', image: '/portfolio/magazine-covers/snapinsta-1788229453666.jpg', alt: 'Capa da Harper’s Bazaar Man com Rodrigo Santoro', story: ['/portfolio/instagram-full/rodrigo-santoro.jpg'] },
+  { title: 'Chay Suede', publication: 'L’Officiel Hommes Brasil Digital · Março 2024', image: '/portfolio/magazine-covers/2024-chay-suede-lofficiel-hommes.jpg', alt: 'Capa digital da L’Officiel Hommes Brasil com Chay Suede', story: [] },
+  { title: 'Cauã Reymond', publication: 'GQ Brasil Dossiê · Agosto 2023 · Jean Paul Gaultier', image: '/portfolio/magazine-covers/2023-caua-reymond-gq-dossie.jpg', alt: 'Capa da GQ Brasil Dossiê com Cauã Reymond', story: [] },
+  { title: 'Paulo André', publication: 'GQ Brasil Dossiê · Junho 2022 · Paco Rabanne', image: '/portfolio/magazine-covers/2022-paulo-andre-gq-dossie.jpg', alt: 'Capa da GQ Brasil Dossiê com Paulo André', story: [] },
+  { title: 'Jade Picon', publication: 'Harper’s Bazaar Brasil Digital · Julho 2021', image: '/portfolio/magazine-covers/2023-jade-picon-harpers-bazaar.jpg', alt: 'Capa digital da Harper’s Bazaar Brasil com Jade Picon', story: [] },
 ];
 
 export default function Home() {
@@ -355,7 +361,7 @@ export default function Home() {
       </section>
 
       <section className="magazine" id="magazine" aria-label="Capas de revista">
-        <div className="section-heading"><p>Magazine / Covers</p><span>01 — 10</span></div>
+        <div className="section-heading"><p>Magazine / Covers</p><span>2026 — 2021 · Marina em destaque</span></div>
         <div className="magazine-grid">
           {covers.map((cover, index) => <button type="button" className="cover-button" onClick={() => setOpenCover(index)} aria-label={`Abrir editorial de ${cover.title}`} key={`${cover.title}-${index}`}><figure><img src={cover.image} alt={cover.alt} loading="lazy" /><figcaption><span>{String(index + 1).padStart(2, '0')}</span><h3>{cover.title}</h3><p>{cover.publication} · Ver editorial ↗</p></figcaption></figure></button>)}
         </div>
