@@ -84,8 +84,6 @@ const marinaHeroImages = [
 ];
 
 const galleryImages = [
-  ['/portfolio/instagram-full/armor-editorial.jpg', 'Editorial masculino com armadura'],
-  ['/portfolio/instagram-full/borsoi.jpg', 'Editorial masculino para Dior'],
   ['/portfolio/instagram-full/julio-reis.jpg', 'Retrato em linguagem Polaroid'],
   ['/portfolio/instagram-full/fucking-young.jpg', 'Editorial para Fucking Young'],
   ['/portfolio/instagram-full/portrait-white.jpg', 'Retrato feminino em branco'],
@@ -99,7 +97,6 @@ const galleryImages = [
 ];
 
 const archiveImages = [
-  ['/portfolio/archive/2025-arthur-paek-03.jpg', 'Retrato de Arthur Paek'],
   ['/portfolio/archive/2024-jao-01.jpg', 'Editorial de Jão para Harper’s Bazaar Man'],
   ['/portfolio/archive/2024-santoro-01.jpg', 'Editorial de Rodrigo Santoro'],
   ['/portfolio/archive/2024-jao-02.jpg', 'Jão em editorial de moda'],
