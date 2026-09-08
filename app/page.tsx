@@ -87,6 +87,7 @@ const carnanPreviewImages = [
 ];
 
 const carnanRemainingImages = [
+  ['/portfolio/carnan-niemeyer/22-red-film-still.jpg', 'Frame vermelho do vídeo Carnan + Niemeyer'],
   ['/portfolio/carnan-niemeyer/07-look.jpg', 'Look masculino em movimento no desfile Carnan + Niemeyer'],
   ['/portfolio/carnan-niemeyer/08-runway.jpg', 'Modelos na passarela Carnan + Niemeyer'],
   ['/portfolio/carnan-niemeyer/09-red-jacket.jpg', 'Modelo com jaqueta vermelha no desfile Carnan + Niemeyer'],
