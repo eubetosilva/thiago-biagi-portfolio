@@ -97,6 +97,34 @@ const galleryImages = [
   ['/portfolio/instagram-full/denim-portrait.jpg', 'Retrato masculino em denim'],
 ];
 
+const archiveImages = [
+  ['/portfolio/archive/2025-fabio-porchat-01.jpg', 'Editorial de Fabio Porchat'],
+  ['/portfolio/archive/2025-arthur-paek-01.jpg', 'Editorial de Arthur Paek'],
+  ['/portfolio/archive/2025-fabio-porchat-02.jpg', 'Retrato editorial de Fabio Porchat'],
+  ['/portfolio/archive/2025-arthur-paek-02.jpg', 'Editorial masculino de Arthur Paek'],
+  ['/portfolio/archive/2025-arthur-paek-03.jpg', 'Retrato de Arthur Paek'],
+  ['/portfolio/archive/2024-jao-01.jpg', 'Editorial de Jão para Harper’s Bazaar Man'],
+  ['/portfolio/archive/2024-santoro-01.jpg', 'Editorial de Rodrigo Santoro'],
+  ['/portfolio/archive/2024-jao-02.jpg', 'Jão em editorial de moda'],
+  ['/portfolio/archive/2024-santoro-02.jpg', 'Rodrigo Santoro em editorial de moda'],
+  ['/portfolio/archive/2024-chay-ysl.jpg', 'Chay Suede em editorial para YSL'],
+  ['/portfolio/archive/2024-maisa-01.jpg', 'Editorial de Maisa'],
+  ['/portfolio/archive/2024-santoro-03.jpg', 'Rodrigo Santoro em retrato editorial'],
+  ['/portfolio/archive/2024-jao-03.jpg', 'Retrato editorial de Jão'],
+  ['/portfolio/archive/2024-laura-carbono.jpg', 'Laura em editorial Carbono'],
+  ['/portfolio/archive/2024-maisa-02.jpg', 'Retrato de Maisa'],
+  ['/portfolio/archive/2024-santoro-04.jpg', 'Editorial de verão com Rodrigo Santoro'],
+  ['/portfolio/archive/2024-jao-04.jpg', 'Jão em editorial Harper’s Bazaar Man'],
+  ['/portfolio/archive/2023-social-editorial-01.jpg', 'Editorial de moda social'],
+  ['/portfolio/archive/2023-social-editorial-02.jpg', 'Editorial de alfaiataria'],
+  ['/portfolio/archive/2022-paulo-andre-01.jpg', 'Paulo André em editorial GQ'],
+  ['/portfolio/archive/2022-l7nnon.jpg', 'Retrato editorial de L7NNON'],
+  ['/portfolio/archive/2022-paulo-andre-02.jpg', 'Retrato de Paulo André'],
+  ['/portfolio/archive/2021-matue-teto-01.jpg', 'Matuê e Teto em editorial'],
+  ['/portfolio/archive/2021-pirata.jpg', 'Editorial Pirata'],
+  ['/portfolio/archive/2021-matue-teto-02.jpg', 'Matuê e Teto em estúdio'],
+];
+
 const motion = [
   ['Db0nUrmuKC-', '/portfolio/motion/01.jpg'], ['DbOUSBKu6LA', '/portfolio/motion/02.jpg'],
   ['DaNiK5JIWu_', '/portfolio/motion/03.jpg'], ['DZn3Tv6glDK', '/portfolio/motion/04.jpg'],
@@ -161,6 +189,22 @@ export default function Home() {
         </figure>
       </section>
 
+      <section className="carnan-feature" aria-labelledby="carnan-title">
+        <div className="section-heading"><p id="carnan-title">Carnan + Niemeyer / Runway</p><span>04 Setembro 2026</span></div>
+        <div className="carnan-intro">
+          <h2>Construção<br />coletiva</h2>
+          <p>Styling para uma coleção que parte de Niemeyer e revela do lado de fora aquilo que normalmente só se vê por dentro: construção, acabamento e cuidado.</p>
+        </div>
+        <div className="carnan-gallery">
+          <figure className="carnan-architecture"><img src="/portfolio/carnan-niemeyer/01-arquitetura.jpg" alt="Desfile Carnan no Caminho Niemeyer" /></figure>
+          <figure><img src="/portfolio/carnan-niemeyer/02-passarela.jpg" alt="Looks do desfile Carnan e Niemeyer" /></figure>
+          <figure><img src="/portfolio/carnan-niemeyer/03-elenco.jpg" alt="Elenco na passarela do desfile Carnan" loading="lazy" /></figure>
+          <figure><img src="/portfolio/carnan-niemeyer/04-look.jpg" alt="Look em camurça no desfile Carnan" loading="lazy" /></figure>
+          <figure className="carnan-detail"><img src="/portfolio/carnan-niemeyer/05-detalhe.jpg" alt="Detalhe de styling da coleção Carnan e Niemeyer" loading="lazy" /></figure>
+        </div>
+        <div className="carnan-credit"><span>Styling / Thiago Biagi</span><span>Direção criativa / Paulo H. Carneiro</span><span>Direção de projeto / Bruno Fernandes</span></div>
+      </section>
+
       <section className="marina-covers-post" aria-labelledby="marina-covers-title">
         <div className="section-heading"><p id="marina-covers-title">Marina Ruy Barbosa / Marie Claire Brasil</p><span>Setembro 2026</span></div>
         <div className="marina-covers-pair">
@@ -177,6 +221,17 @@ export default function Home() {
             <img src={src} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} />
           </figure>
         ))}
+      </section>
+
+      <section className="archive-selection" aria-labelledby="archive-title">
+        <div className="section-heading archive-heading"><p id="archive-title">Selected archive</p><span>2025 — 2021</span></div>
+        <div className="image-wall archive-wall" aria-label="Seleção de trabalhos do arquivo">
+          {archiveImages.map(([src, alt], index) => (
+            <figure key={src} className={`wall-image wall-image-${index + 1}`}>
+              <img src={src} alt={alt} loading="lazy" />
+            </figure>
+          ))}
+        </div>
       </section>
 
       <section className="miss-dior-study" id="miss-dior" aria-labelledby="miss-dior-title">

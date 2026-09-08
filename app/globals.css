@@ -75,6 +75,19 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .hero-reel iframe { display:block; width:100%; height:clamp(300px,52vh,530px); border:0; background:#111; box-shadow:0 18px 50px rgba(0,0,0,.3); }
 .hero-reel span { display:block; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,.55); font-size:8px; text-transform:uppercase; letter-spacing:.14em; text-shadow:0 1px 10px rgba(0,0,0,.7); }
 .image-wall { display:grid; grid-template-columns:repeat(12,1fr); gap:4px; padding:4px; background:#fff; }
+.carnan-feature { padding:8vw 2.7vw 12vw; background:#f4f3ef; }
+.carnan-intro { display:grid; grid-template-columns:1.15fr .85fr; gap:5vw; align-items:end; margin:4vw 0 6vw; }
+.carnan-intro h2 { margin:0; font-family:Georgia,'Times New Roman',serif; font-size:clamp(68px,10vw,158px); font-weight:400; line-height:.78; letter-spacing:-.065em; }
+.carnan-intro p { max-width:530px; margin:0 0 .5vw; font-size:clamp(16px,1.6vw,25px); line-height:1.35; }
+.carnan-gallery { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:4px; align-items:start; }
+.carnan-gallery figure { margin:0; overflow:hidden; background:#ddd; }
+.carnan-gallery figure:nth-child(1) { grid-column:span 5; margin-top:9vw; }
+.carnan-gallery figure:nth-child(2) { grid-column:span 7; }
+.carnan-gallery figure:nth-child(3) { grid-column:2 / span 6; margin-top:4px; }
+.carnan-gallery figure:nth-child(4) { grid-column:8 / span 5; margin-top:8vw; }
+.carnan-gallery figure:nth-child(5) { grid-column:3 / span 8; margin-top:6vw; }
+.carnan-gallery img { display:block; width:100%; height:auto; }
+.carnan-credit { display:flex; flex-wrap:wrap; gap:8px 28px; margin-top:3vw; padding-top:12px; border-top:1px solid var(--line); font-size:9px; text-transform:uppercase; letter-spacing:.12em; }
 .marina-covers-post { padding:8vw 2.7vw 10vw; background:#fff; }
 .marina-covers-pair { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; margin-top:4vw; }
 .marina-covers-pair figure { margin:0; }
@@ -92,6 +105,9 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .wall-image:nth-child(5n) { grid-column:span 12; min-height:82vh; }
 .wall-image img { object-fit:cover; object-position:center; transition:transform 1.1s cubic-bezier(.2,.7,.2,1); }
 .wall-image:hover img { transform:scale(1.015); }
+.archive-selection { padding-top:10vw; background:#fff; }
+.archive-heading { margin:0 2.7vw 4vw; }
+.archive-wall { padding-bottom:4px; }
 .magazine { padding:9vw 2.7vw 12vw; background:#fff; }
 .magazine-grid { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; margin-top:4vw; }
 .magazine figure { margin:0; }
@@ -164,6 +180,16 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .hero-reel iframe { height:170px; }
   .hero-reel span { font-size:6px; }
   .image-wall { grid-template-columns:1fr; gap:3px; padding:3px; }
+  .carnan-feature { padding:24vw 18px; }
+  .carnan-intro { grid-template-columns:1fr; gap:9vw; margin:12vw 0 16vw; }
+  .carnan-intro h2 { font-size:20vw; }
+  .carnan-gallery { grid-template-columns:repeat(6,minmax(0,1fr)); }
+  .carnan-gallery figure:nth-child(1) { grid-column:1 / span 4; margin-top:12vw; }
+  .carnan-gallery figure:nth-child(2) { grid-column:2 / -1; }
+  .carnan-gallery figure:nth-child(3) { grid-column:1 / -1; margin-top:4px; }
+  .carnan-gallery figure:nth-child(4) { grid-column:2 / span 5; margin-top:12vw; }
+  .carnan-gallery figure:nth-child(5) { grid-column:1 / -1; margin-top:14vw; }
+  .carnan-credit { gap:8px 18px; margin-top:12vw; font-size:8px; }
   .marina-covers-post { padding:24vw 18px; }
   .marina-covers-pair { gap:4px; margin-top:12vw; }
   .marina-covers-pair figure:nth-child(2) { margin-top:12vw; }
@@ -172,6 +198,8 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .marina-editorial-strip figure:first-child { grid-column:1 / -1; }
   .marina-editorial-strip figure:nth-child(2) { margin-bottom:10vw; }
   .wall-image,.wall-image:nth-child(5n) { grid-column:auto; min-height:0; height:78vh; }
+  .archive-selection { padding-top:24vw; }
+  .archive-heading { margin:0 18px 12vw; }
   .magazine { padding:24vw 18px; }
   .magazine-grid { grid-template-columns:1fr; gap:20vw; margin-top:12vw; }
   .magazine figure:nth-child(2) { margin-top:0; }
