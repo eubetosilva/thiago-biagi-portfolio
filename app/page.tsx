@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const projects = [
   { number: '01', title: 'Marina Ruy Barbosa', subtitle: 'Marie Claire Brasil · Setembro 2026', image: '/portfolio/celebrities/marina-ruy-barbosa/01.jpg', alt: 'Marina Ruy Barbosa para Marie Claire Brasil com styling de Thiago Biagi', note: 'Celebrity study', study: 'marina' },
@@ -14,7 +14,10 @@ const projects = [
   { number: '09', title: 'João Vicente', subtitle: 'Dries Van Noten · Omega', image: '/portfolio/instagram/joao-vicente-gala.jpg', alt: 'João Vicente de Castro em styling de gala', note: 'Celebrity styling' },
   { number: '10', title: 'Arthur Paek', subtitle: "L'Officiel Hommes Brasil", image: '/portfolio/instagram-full/arthur-paek-editorial.jpg', alt: 'Arthur Paek em editorial de alfaiataria', note: 'Celebrity styling' },
   { number: '11', title: 'Isabelle Drummond', subtitle: 'Victoria Beckham · NK Store', image: '/portfolio/isabelle-drummond/01-victoria-beckham.jpg', alt: 'Isabelle Drummond usando Victoria Beckham com styling de Thiago Biagi', note: 'Celebrity styling' },
+  { number: '12', title: 'Jão', subtitle: 'Harper’s Bazaar Man Brasil · Novembro 2024', image: '/portfolio/archive/2024-jao-01.jpg', alt: 'Jão para Harper’s Bazaar Man Brasil', note: 'Celebrity study', study: 'jao' },
 ];
+
+const jaoStudy = Array.from({ length: 4 }, (_, index) => `/portfolio/archive/2024-jao-${String(index + 1).padStart(2, '0')}.jpg`);
 
 const marinaStudy = Array.from({ length: 9 }, (_, index) => ({
   image: `/portfolio/celebrities/marina-ruy-barbosa/${String(index + 1).padStart(2, '0')}.jpg`,
@@ -93,15 +96,9 @@ const galleryImages = [
   ['/portfolio/instagram-full/suit-camera.jpg', 'Editorial masculino de alfaiataria'],
   ['/portfolio/instagram-full/field-suit.jpg', 'Alfaiataria em locação externa'],
   ['/portfolio/instagram-full/pearl-dress.jpg', 'Editorial feminino em vestido bordado'],
-  ['/portfolio/instagram-full/yellow-portrait.jpg', 'Retrato masculino em amarelo'],
-  ['/portfolio/instagram-full/denim-portrait.jpg', 'Retrato masculino em denim'],
 ];
 
 const archiveImages = [
-  ['/portfolio/archive/2025-fabio-porchat-01.jpg', 'Editorial de Fabio Porchat'],
-  ['/portfolio/archive/2025-arthur-paek-01.jpg', 'Editorial de Arthur Paek'],
-  ['/portfolio/archive/2025-fabio-porchat-02.jpg', 'Retrato editorial de Fabio Porchat'],
-  ['/portfolio/archive/2025-arthur-paek-02.jpg', 'Editorial masculino de Arthur Paek'],
   ['/portfolio/archive/2025-arthur-paek-03.jpg', 'Retrato de Arthur Paek'],
   ['/portfolio/archive/2024-jao-01.jpg', 'Editorial de Jão para Harper’s Bazaar Man'],
   ['/portfolio/archive/2024-santoro-01.jpg', 'Editorial de Rodrigo Santoro'],
@@ -141,7 +138,7 @@ const covers = [
   { title: 'Fabio Porchat', publication: 'GQ Brasil · Creativity Awards 2025', image: '/portfolio/magazine-covers/SaveVid.Net_497871643_18509216137027380_8014493567002082460_n.jpg', alt: 'Capa da GQ Brasil com Fabio Porchat', story: [] },
   { title: 'Arthur Paek', publication: "L’Officiel Hommes Brasil · Fevereiro 2025", image: '/portfolio/magazine-covers/SaveVid.Net_502357379_18518750551027380_5881339525250106580_n.jpg', alt: 'Capa da L’Officiel Hommes Brasil com Arthur Paek', story: ['/portfolio/instagram-full/arthur-paek-editorial.jpg'] },
   { title: 'Chay Suede', publication: 'GQ Brasil · Março 2025 · Gucci', image: '/portfolio/magazine-covers/04-gq-gucci-chay.jpg', alt: 'Capa da GQ Brasil com Chay Suede', story: ['/portfolio/chay-2026/01-chay-hermes-prada.jpg'] },
-  { title: 'Jão', publication: 'Harper’s Bazaar Man Brasil · Novembro 2024', image: '/portfolio/magazine-covers/2024-jao-bazaar-man.jpg', alt: 'Capa da Harper’s Bazaar Man Brasil com Jão', story: [] },
+  { title: 'Jão', publication: 'Harper’s Bazaar Man Brasil · Novembro 2024', image: '/portfolio/magazine-covers/2024-jao-bazaar-man.jpg', alt: 'Capa da Harper’s Bazaar Man Brasil com Jão', story: jaoStudy },
   { title: 'Show-Guys', publication: 'Harper’s Bazaar Man Brasil · Abril 2024', image: '/portfolio/magazine-covers/2024-show-guys-bazaar-man.jpg', alt: 'Capa Show-Guys da Harper’s Bazaar Man Brasil', story: [] },
   { title: 'João Guilherme', publication: 'GQ Brasil · Men of the Year 2024', image: '/portfolio/magazine-covers/SaveVid.Net_469257802_18478644646027380_1905629404697638516_n.jpg', alt: 'Capa da GQ Brasil com João Guilherme', story: ['/portfolio/joao-guilherme.jpg'] },
   { title: 'Rodrigo Santoro', publication: 'Harper’s Bazaar Man · Dezembro 2024 · Poesia de Verão', image: '/portfolio/magazine-covers/snapinsta-1788229453666.jpg', alt: 'Capa da Harper’s Bazaar Man com Rodrigo Santoro', story: ['/portfolio/instagram-full/rodrigo-santoro.jpg'] },
@@ -150,6 +147,38 @@ const covers = [
   { title: 'Paulo André', publication: 'GQ Brasil Dossiê · Junho 2022 · Paco Rabanne', image: '/portfolio/magazine-covers/2022-paulo-andre-gq-dossie.jpg', alt: 'Capa da GQ Brasil Dossiê com Paulo André', story: [] },
   { title: 'Jade Picon', publication: 'Harper’s Bazaar Brasil Digital · Julho 2021', image: '/portfolio/magazine-covers/2023-jade-picon-harpers-bazaar.jpg', alt: 'Capa digital da Harper’s Bazaar Brasil com Jade Picon', story: [] },
 ];
+
+const heroSlides = [
+  ...marinaHeroImages.slice(0, 2).map(image => ({ image, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
+  ...['03', '04'].map(n => ({ image: `/portfolio/magazine-covers/marina-mc-cover-${n}.jpg`, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
+  ...marinaHeroImages.slice(2).map(image => ({ image, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
+  ...marinaStudy.map(({ image }) => ({ image, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
+  ...['00-thiago-biagi', '01-arquitetura'].map(n => ({ image: `/portfolio/carnan-niemeyer/${n}.jpg`, caption: 'Carnan + Niemeyer / Runway' })),
+  ...covers.slice(1).map(({ image, title, publication }) => ({ image, caption: `${title} / ${publication}` })),
+  ...projects.map(({ image, title, subtitle }) => ({ image, caption: `${title} / ${subtitle}` })),
+  ...chayLooks.map(([image, brands]) => ({ image, caption: `Chay Suede / ${brands}` })),
+  ...galleryImages.map(([image]) => ({ image, caption: 'Portfolio / Editorials & campaigns' })),
+  ...capituloFinal.map(([image]) => ({ image, caption: 'Capítulo Final / Numéro Netherlands' })),
+  ...missDiorImages.map(([image]) => ({ image, caption: 'Miss Dior / Editorial' })),
+  ...pietRiachueloImages.map(([image]) => ({ image, caption: 'PIET + Riachuelo / Campaign study' })),
+  ...archiveImages.map(([image]) => ({ image, caption: 'Portfolio / Editorials & campaigns' })),
+].filter((slide, index, all) => all.findIndex(item => item.image === slide.image) === index);
+
+function PortfolioSlideshow() {
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const timer = window.setInterval(() => setActive(index => (index + 1) % heroSlides.length), 4800);
+    return () => window.clearInterval(timer);
+  }, []);
+  return <>
+    <div className="portfolio-slides">
+      {heroSlides.map((slide, index) => (index === active || index === (active + 1) % heroSlides.length) &&
+        <img key={slide.image} src={slide.image} alt={slide.caption} className={index === active ? 'is-active' : ''} aria-hidden={index !== active} />)}
+    </div>
+    <figcaption>{heroSlides[active].caption}</figcaption>
+  </>;
+}
 
 export default function Home() {
   const [viewMode, setViewMode] = useState<'grid' | 'large'>('grid');
@@ -182,10 +211,7 @@ export default function Home() {
           </div>
         </div>
         <figure className="hero-editorial-image">
-          <div className="hero-campaign-slides">
-            {marinaHeroImages.map((image, index) => <img src={image} alt={`Marina Ruy Barbosa para Marie Claire Brasil, destaque ${index + 1}`} key={image} />)}
-          </div>
-          <figcaption>Marina Ruy Barbosa / Marie Claire Brasil</figcaption>
+          <PortfolioSlideshow />
         </figure>
       </section>
 
@@ -194,39 +220,33 @@ export default function Home() {
         <div className="carnan-gallery">
           <figure className="carnan-thiago"><img src="/portfolio/carnan-niemeyer/00-thiago-biagi.jpg" alt="Thiago Biagi durante o desfile Carnan e Niemeyer" /></figure>
           <figure className="carnan-architecture"><img src="/portfolio/carnan-niemeyer/01-arquitetura.jpg" alt="Desfile Carnan no Caminho Niemeyer" /></figure>
-          <figure><video src="/portfolio/carnan-niemeyer/runway-film.mp4" autoPlay muted loop playsInline controls preload="metadata" aria-label="Fashion film do desfile Carnan e Niemeyer" /></figure>
-          <figure><img src="/portfolio/carnan-niemeyer/03-elenco.jpg" alt="Elenco na passarela do desfile Carnan" loading="lazy" /></figure>
-          <figure><img src="/portfolio/carnan-niemeyer/04-look.jpg" alt="Look em camurça no desfile Carnan" loading="lazy" /></figure>
-          <figure className="carnan-detail"><img src="/portfolio/carnan-niemeyer/05-detalhe.jpg" alt="Detalhe de styling da coleção Carnan e Niemeyer" loading="lazy" /></figure>
         </div>
       </section>
 
       <section className="marina-covers-post" aria-labelledby="marina-covers-title">
-        <div className="section-heading"><p id="marina-covers-title">Marina Ruy Barbosa / Marie Claire Brasil</p><span>Setembro 2026</span></div>
+        <div className="section-heading"><p id="marina-covers-title">Marina Ruy Barbosa / Marie Claire Brasil</p><span>Setembro 2026 · 04 capas</span></div>
         <div className="marina-covers-pair">
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026.jpg" alt="Primeira capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>01</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
           <figure><img src="/portfolio/magazine-covers/marina-ruy-barbosa-marie-claire-setembro-2026-alt.jpg" alt="Segunda capa da Marie Claire Brasil com Marina Ruy Barbosa" /><figcaption><span>02</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
+          <figure><img src="/portfolio/magazine-covers/marina-mc-cover-03.jpg" alt="Terceira capa da Marie Claire Brasil com Marina Ruy Barbosa" loading="lazy" /><figcaption><span>03</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
+          <figure><img src="/portfolio/magazine-covers/marina-mc-cover-04.jpg" alt="Quarta capa da Marie Claire Brasil com Marina Ruy Barbosa" loading="lazy" /><figcaption><span>04</span><p>Marina Ruy Barbosa / Marie Claire Brasil</p></figcaption></figure>
         </div>
       </section>
 
       <section className="portfolio" id="portfolio" aria-labelledby="portfolio-title">
         <div className="section-heading portfolio-heading"><p id="portfolio-title">Portfolio / Editorials &amp; campaigns</p><span>Selected work</span></div>
       <section className="image-wall" aria-label="Galeria editorial">
-        {galleryImages.map(([src, alt], index) => (
+        {[...galleryImages, ...archiveImages].map(([src, alt], index) => (
           <figure key={src} className={`wall-image wall-image-${index + 1}`}>
             <img src={src} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} />
           </figure>
         ))}
       </section>
 
-      <section className="archive-selection" aria-labelledby="archive-title">
-        <div className="section-heading archive-heading"><p id="archive-title">Selected archive</p><span>2025 — 2021</span></div>
-        <div className="image-wall archive-wall" aria-label="Seleção de trabalhos do arquivo">
-          {archiveImages.map(([src, alt], index) => (
-            <figure key={src} className={`wall-image wall-image-${index + 1}`}>
-              <img src={src} alt={alt} loading="lazy" />
-            </figure>
-          ))}
+      <section className="magazine" id="magazine" aria-label="Capas de revista">
+        <div className="section-heading"><p>Magazine / Covers</p><span>2026 — 2021 · Marina em destaque</span></div>
+        <div className="magazine-grid">
+          {covers.map((cover, index) => <button type="button" className="cover-button" onClick={() => setOpenCover(index)} aria-label={`Abrir editorial de ${cover.title}`} key={`${cover.title}-${index}`}><figure><img src={cover.image} alt={cover.alt} loading="lazy" /><figcaption><span>{String(index + 1).padStart(2, '0')}</span><h3>{cover.title}</h3><p>{cover.publication} · Ver editorial ↗</p></figcaption></figure></button>)}
         </div>
       </section>
 
@@ -289,7 +309,7 @@ export default function Home() {
       </section>
 
       <section className="work" id="work">
-        <div className="section-heading"><p>Celebrities</p><span>01 — 11</span></div>
+        <div className="section-heading"><p>Celebrities</p><span>01 — 12</span></div>
         <div className="project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.number}>
@@ -307,6 +327,27 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {openCelebrity === 'jao' && (
+        <div className="celebrity-profile" role="dialog" aria-modal="true" aria-label="Ensaio de Jão">
+          <button type="button" className="celebrity-profile-close" onClick={() => setOpenCelebrity(null)}>Fechar ×</button>
+          <header className="celebrity-profile-hero">
+            <div>
+              <p>Harper’s Bazaar Man Brasil</p>
+              <h2>Jão</h2>
+              <div className="celebrity-profile-intro"><span>Novembro 2024</span><span>Styling · Thiago Biagi</span></div>
+            </div>
+            <figure><img src="/portfolio/magazine-covers/2024-jao-bazaar-man.jpg" alt="Capa de Jão para Harper’s Bazaar Man Brasil" /></figure>
+          </header>
+          <section className="celebrity-profile-grid" aria-label="Fotos de Jão para Harper’s Bazaar Man Brasil">
+            {jaoStudy.map((image, index) => (
+              <figure key={image} className={`celebrity-profile-image celebrity-profile-image-${index + 1}`}>
+                <img src={image} alt={`Jão para Harper’s Bazaar Man Brasil, foto ${index + 1}`} loading="lazy" />
+              </figure>
+            ))}
+          </section>
+        </div>
+      )}
 
       {openCelebrity === 'marina' && (
         <div className="celebrity-profile" role="dialog" aria-modal="true" aria-label="Study de Marina Ruy Barbosa">
@@ -408,13 +449,6 @@ export default function Home() {
         <div className="section-heading"><p>Motion / Fashion films</p><span>01 — 08</span></div>
         <div className="motion-clean-grid">
           {motion.map(([code, image], index) => <a href={`https://www.instagram.com/reel/${code}/`} target="_blank" rel="noreferrer" className="motion-clean-card" key={code}><figure><img src={image} alt={`Fashion film ${index + 1}`} loading="lazy" /><span>Play film ↗</span></figure><p>{String(index + 1).padStart(2, '0')} / Motion</p></a>)}
-        </div>
-      </section>
-
-      <section className="magazine" id="magazine" aria-label="Capas de revista">
-        <div className="section-heading"><p>Magazine / Covers</p><span>2026 — 2021 · Marina em destaque</span></div>
-        <div className="magazine-grid">
-          {covers.map((cover, index) => <button type="button" className="cover-button" onClick={() => setOpenCover(index)} aria-label={`Abrir editorial de ${cover.title}`} key={`${cover.title}-${index}`}><figure><img src={cover.image} alt={cover.alt} loading="lazy" /><figcaption><span>{String(index + 1).padStart(2, '0')}</span><h3>{cover.title}</h3><p>{cover.publication} · Ver editorial ↗</p></figcaption></figure></button>)}
         </div>
       </section>
 
