@@ -70,9 +70,45 @@ const pietRiachueloImages = Array.from({ length: 18 }, (_, index) => [
   `Campanha PIET + Riachuelo, imagem ${index + 1}`,
 ]);
 
+const pietPreviewNumbers = [1, 3, 5, 6, 10];
+const pietPreviewImages = pietPreviewNumbers.map(number => pietRiachueloImages[number - 1]);
+const pietRemainingImages = pietRiachueloImages.filter((_, index) => !pietPreviewNumbers.includes(index + 1));
+
 const pietRiachueloFilms = [
   '/portfolio/piet-riachuelo/film-01.mp4',
   '/portfolio/piet-riachuelo/film-02.mp4',
+];
+
+const carnanPreviewImages = [
+  ['/portfolio/carnan-niemeyer/00-thiago-biagi.jpg', 'Thiago Biagi durante o desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/06-logo.jpg', 'Detalhe do styling Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/20-runway-line.jpg', 'Fila de modelos no desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/01-arquitetura.jpg', 'Desfile Carnan no Caminho Niemeyer'],
+];
+
+const carnanRemainingImages = [
+  ['/portfolio/carnan-niemeyer/07-look.jpg', 'Look masculino em movimento no desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/08-runway.jpg', 'Modelos na passarela Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/09-red-jacket.jpg', 'Modelo com jaqueta vermelha no desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/10-brown-look.jpg', 'Modelo com vestido marrom e bolsa amarela'],
+  ['/portfolio/carnan-niemeyer/03-elenco.jpg', 'Elenco do desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/04-look.jpg', 'Look do desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/05-detalhe.jpg', 'Detalhe de styling Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/11-casting.jpg', 'Casting board Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/12-backstage.jpg', 'Backstage Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/13-bw-detail.jpg', 'Detalhe em preto e branco Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/14-group-red.jpg', 'Composição de passarela Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/15-blue-portrait.jpg', 'Retrato de modelo no desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/16-architecture-walk.jpg', 'Modelo caminhando no Caminho Niemeyer'],
+  ['/portfolio/carnan-niemeyer/17-white-profile.jpg', 'Retrato em perfil no desfile Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/18-casting-board.jpg', 'Prancha de casting Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/19-casting-board-2.jpg', 'Prancha de styling Carnan + Niemeyer'],
+  ['/portfolio/carnan-niemeyer/21-yellow-shirt.jpg', 'Modelo com camisa amarela no desfile Carnan + Niemeyer'],
+];
+
+const carnanFilms = [
+  '/portfolio/carnan-niemeyer/runway-film.mp4',
+  '/portfolio/carnan-niemeyer/film-02.mp4',
 ];
 
 const marinaHeroImages = [
@@ -150,14 +186,14 @@ const heroSlides = [
   ...['03', '04'].map(n => ({ image: `/portfolio/magazine-covers/marina-mc-cover-${n}.jpg`, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
   ...marinaHeroImages.slice(2).map(image => ({ image, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
   ...marinaStudy.map(({ image }) => ({ image, caption: 'Marina Ruy Barbosa / Marie Claire Brasil' })),
-  ...['00-thiago-biagi', '01-arquitetura'].map(n => ({ image: `/portfolio/carnan-niemeyer/${n}.jpg`, caption: 'Carnan + Niemeyer / Runway' })),
+  ...carnanPreviewImages.map(([image]) => ({ image, caption: 'Carnan + Niemeyer / Runway' })),
   ...covers.slice(1).map(({ image, title, publication }) => ({ image, caption: `${title} / ${publication}` })),
   ...projects.map(({ image, title, subtitle }) => ({ image, caption: `${title} / ${subtitle}` })),
   ...chayLooks.map(([image, brands]) => ({ image, caption: `Chay Suede / ${brands}` })),
   ...galleryImages.map(([image]) => ({ image, caption: 'Portfolio / Editorials & campaigns' })),
   ...capituloFinal.map(([image]) => ({ image, caption: 'Capítulo Final / Numéro Netherlands' })),
   ...missDiorImages.map(([image]) => ({ image, caption: 'Miss Dior / Editorial' })),
-  ...pietRiachueloImages.map(([image]) => ({ image, caption: 'PIET + Riachuelo / Campaign study' })),
+  ...pietPreviewImages.map(([image]) => ({ image, caption: 'PIET + Riachuelo / Campaign study' })),
   ...archiveImages.map(([image]) => ({ image, caption: 'Portfolio / Editorials & campaigns' })),
 ].filter((slide, index, all) => all.findIndex(item => item.image === slide.image) === index);
 
@@ -181,6 +217,8 @@ export default function Home() {
   const [viewMode, setViewMode] = useState<'grid' | 'large'>('grid');
   const [openCover, setOpenCover] = useState<number | null>(null);
   const [openCelebrity, setOpenCelebrity] = useState<string | null>(null);
+  const [openCarnan, setOpenCarnan] = useState(false);
+  const [openPiet, setOpenPiet] = useState(false);
 
   return (
     <main className={`site-view site-view-${viewMode}`}>
@@ -213,10 +251,20 @@ export default function Home() {
       </section>
 
       <section className="carnan-feature" aria-labelledby="carnan-title">
-        <div className="section-heading"><p id="carnan-title">Carnan + Niemeyer / Runway</p><span>04 Setembro 2026</span></div>
+        <div className="section-heading"><p id="carnan-title">Carnan + Niemeyer / Runway</p><span>04 Setembro 2026 · Ver completo</span></div>
         <div className="carnan-gallery">
-          <figure className="carnan-thiago"><img src="/portfolio/carnan-niemeyer/00-thiago-biagi.jpg" alt="Thiago Biagi durante o desfile Carnan e Niemeyer" /></figure>
-          <figure className="carnan-architecture"><img src="/portfolio/carnan-niemeyer/01-arquitetura.jpg" alt="Desfile Carnan no Caminho Niemeyer" /></figure>
+          {carnanPreviewImages.map(([image, alt], index) => (
+            <figure key={image}>
+              {index === carnanPreviewImages.length - 1 ? (
+                <button type="button" className="carnan-more-button" onClick={() => setOpenCarnan(true)} aria-label="Abrir o estudo completo de Carnan + Niemeyer">
+                  <img src={image} alt={alt} loading="lazy" />
+                  <span>Ver completo ↗</span>
+                </button>
+              ) : (
+                <img src={image} alt={alt} loading={index === 0 ? 'eager' : 'lazy'} />
+              )}
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -266,18 +314,19 @@ export default function Home() {
       </section>
 
       <section className="piet-study" id="piet" aria-labelledby="piet-title">
-        <div className="section-heading"><p id="piet-title">PIET + Riachuelo / Campaign study</p><span>01 — 20</span></div>
+        <div className="section-heading"><p id="piet-title">PIET + Riachuelo / Campaign study</p><span>01 — 05</span></div>
         <div className="piet-grid">
-          {pietRiachueloFilms.map((film, index) => (
-            <figure className="piet-film" key={film}>
-              <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film PIET + Riachuelo ${index + 1}`} />
-              <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
-            </figure>
-          ))}
-          {pietRiachueloImages.map(([image, alt], index) => (
+          {pietPreviewImages.map(([image, alt], index) => (
             <figure key={image}>
-              <img src={image} alt={alt} loading="lazy" />
-              <figcaption>{String(index + 3).padStart(2, '0')} / Campaign</figcaption>
+              {index === pietPreviewImages.length - 1 ? (
+                <button type="button" className="piet-more-button" onClick={() => setOpenPiet(true)} aria-label="Abrir o estudo completo de PIET + Riachuelo">
+                  <img src={image} alt={alt} loading="lazy" />
+                  <span>Ver completo ↗</span>
+                </button>
+              ) : (
+                <img src={image} alt={alt} loading="lazy" />
+              )}
+              <figcaption>{String(index + 1).padStart(2, '0')} / Campaign</figcaption>
             </figure>
           ))}
         </div>
@@ -439,6 +488,68 @@ export default function Home() {
             <p>Agnes Nunes / Mondepars</p>
             <div><span>Celebrity styling</span><span>Styling · Thiago Biagi</span><span>Fashion film</span><span>Mondepars</span></div>
           </footer>
+        </div>
+      )}
+
+      {openPiet && (
+        <div className="celebrity-profile" role="dialog" aria-modal="true" aria-label="Study completo de PIET + Riachuelo">
+          <button type="button" className="celebrity-profile-close" onClick={() => setOpenPiet(false)}>Fechar ×</button>
+          <header className="celebrity-profile-hero">
+            <div>
+              <p>Campaign study</p>
+              <h2>PIET +<br /><em>Riachuelo</em></h2>
+              <div className="celebrity-profile-intro">
+                <span>Paris Fashion Week</span>
+                <span>Styling · Thiago Biagi</span>
+              </div>
+            </div>
+            <figure><img src={pietPreviewImages[0][0]} alt={pietPreviewImages[0][1]} /></figure>
+          </header>
+          <section className="celebrity-profile-grid" aria-label="Fotos restantes de PIET + Riachuelo">
+            {pietRiachueloFilms.map((film, index) => (
+              <figure className="celebrity-profile-image celebrity-profile-film" key={film}>
+                <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film PIET + Riachuelo ${index + 1}`} />
+                <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
+              </figure>
+            ))}
+            {pietRemainingImages.map(([image, alt], index) => (
+              <figure key={image} className={`celebrity-profile-image celebrity-profile-image-${index + 1}`}>
+                <img src={image} alt={alt} loading="lazy" />
+                <figcaption>{String(index + 3).padStart(2, '0')} / Campaign</figcaption>
+              </figure>
+            ))}
+          </section>
+        </div>
+      )}
+
+      {openCarnan && (
+        <div className="celebrity-profile" role="dialog" aria-modal="true" aria-label="Study completo de Carnan + Niemeyer">
+          <button type="button" className="celebrity-profile-close" onClick={() => setOpenCarnan(false)}>Fechar ×</button>
+          <header className="celebrity-profile-hero">
+            <div>
+              <p>Runway study</p>
+              <h2>Carnan +<br /><em>Niemeyer</em></h2>
+              <div className="celebrity-profile-intro">
+                <span>04 Setembro 2026</span>
+                <span>Styling · Thiago Biagi</span>
+              </div>
+            </div>
+            <figure><img src={carnanPreviewImages[1][0]} alt={carnanPreviewImages[1][1]} /></figure>
+          </header>
+          <section className="celebrity-profile-grid" aria-label="Fotos restantes de Carnan + Niemeyer">
+            {carnanFilms.map((film, index) => (
+              <figure className="celebrity-profile-image celebrity-profile-film" key={film}>
+                <video src={film} autoPlay muted loop playsInline controls preload="metadata" aria-label={`Fashion film Carnan + Niemeyer ${index + 1}`} />
+                <figcaption>{String(index + 1).padStart(2, '0')} / Fashion film</figcaption>
+              </figure>
+            ))}
+            {carnanRemainingImages.map(([image, alt], index) => (
+              <figure key={image} className={`celebrity-profile-image celebrity-profile-image-${index + 1}`}>
+                <img src={image} alt={alt} loading="lazy" />
+                <figcaption>{String(index + 3).padStart(2, '0')} / Runway</figcaption>
+              </figure>
+            ))}
+          </section>
         </div>
       )}
 

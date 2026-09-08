@@ -86,7 +86,12 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .carnan-gallery figure { margin:0; overflow:hidden; background:#ddd; }
 .carnan-gallery figure:nth-child(1) { grid-column:span 5; }
 .carnan-gallery figure:nth-child(2) { grid-column:span 7; margin-top:9vw; }
+.carnan-gallery figure:nth-child(3) { grid-column:2 / span 6; margin-top:5vw; }
+.carnan-gallery figure:nth-child(4) { grid-column:8 / -1; margin-top:13vw; }
 .carnan-gallery img,.carnan-gallery video { display:block; width:100%; height:auto; }
+.carnan-more-button { position:relative; display:block; width:100%; padding:0; border:0; background:transparent; color:#111; cursor:pointer; text-align:left; }
+.carnan-more-button span { position:absolute; right:12px; bottom:12px; padding:9px 12px; background:#fff; color:#111; font-size:8px; text-transform:uppercase; letter-spacing:.12em; }
+.carnan-more-button:focus-visible { outline:2px solid #111; outline-offset:5px; }
 .marina-covers-post { padding:8vw 2.7vw 10vw; background:#fff; }
 .marina-covers-pair { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; margin-top:4vw; }
 .marina-covers-pair figure { margin:0; }
@@ -180,6 +185,8 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
   .carnan-gallery { grid-template-columns:repeat(6,minmax(0,1fr)); margin-top:12vw; }
   .carnan-gallery figure:nth-child(1) { grid-column:1 / span 4; margin-top:0; }
   .carnan-gallery figure:nth-child(2) { grid-column:2 / -1; margin-top:12vw; }
+  .carnan-gallery figure:nth-child(3) { grid-column:1 / span 5; margin-top:12vw; }
+  .carnan-gallery figure:nth-child(4) { grid-column:2 / -1; margin-top:12vw; }
   .marina-covers-post { padding:24vw 18px; }
   .marina-covers-pair { gap:4px; margin-top:12vw; }
   .marina-covers-pair figure:nth-child(2) { margin-top:12vw; }
@@ -428,6 +435,9 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .piet-grid figure:nth-child(3n+2) { margin-top:7vw; }
 .piet-grid figure img,.piet-grid figure video { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; background:#eee; }
 .piet-grid figcaption { margin:9px 0 0; padding-top:9px; border-top:1px solid var(--line); font-size:8px; text-transform:uppercase; letter-spacing:.12em; }
+.piet-more-button { position:relative; display:block; width:100%; padding:0; border:0; background:transparent; color:#111; cursor:pointer; text-align:left; }
+.piet-more-button span { position:absolute; right:12px; bottom:12px; padding:9px 12px; background:#fff; color:#111; font-size:8px; text-transform:uppercase; letter-spacing:.12em; }
+.piet-more-button:focus-visible { outline:2px solid #111; outline-offset:5px; }
 .chapter-study { padding:9vw 2.7vw 12vw; background:#fff; }
 .chapter-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6vw 5px; margin-top:3vw; align-items:start; }
 .chapter-grid figure { margin:0; }
