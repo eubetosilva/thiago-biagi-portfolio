@@ -194,7 +194,7 @@ export default function Home() {
         <div className="carnan-gallery">
           <figure className="carnan-thiago"><img src="/portfolio/carnan-niemeyer/00-thiago-biagi.jpg" alt="Thiago Biagi durante o desfile Carnan e Niemeyer" /></figure>
           <figure className="carnan-architecture"><img src="/portfolio/carnan-niemeyer/01-arquitetura.jpg" alt="Desfile Carnan no Caminho Niemeyer" /></figure>
-          <figure><img src="/portfolio/carnan-niemeyer/02-passarela.jpg" alt="Looks do desfile Carnan e Niemeyer" /></figure>
+          <figure><video src="/portfolio/carnan-niemeyer/runway-film.mp4" autoPlay muted loop playsInline controls preload="metadata" aria-label="Fashion film do desfile Carnan e Niemeyer" /></figure>
           <figure><img src="/portfolio/carnan-niemeyer/03-elenco.jpg" alt="Elenco na passarela do desfile Carnan" loading="lazy" /></figure>
           <figure><img src="/portfolio/carnan-niemeyer/04-look.jpg" alt="Look em camurça no desfile Carnan" loading="lazy" /></figure>
           <figure className="carnan-detail"><img src="/portfolio/carnan-niemeyer/05-detalhe.jpg" alt="Detalhe de styling da coleção Carnan e Niemeyer" loading="lazy" /></figure>

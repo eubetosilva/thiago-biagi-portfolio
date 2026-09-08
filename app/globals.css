@@ -84,7 +84,7 @@ footer { display:flex; justify-content:space-between; gap:20px; border-top:1px s
 .carnan-gallery figure:nth-child(4) { grid-column:8 / span 5; margin-top:8vw; }
 .carnan-gallery figure:nth-child(5) { grid-column:2 / span 5; margin-top:6vw; }
 .carnan-gallery figure:nth-child(6) { grid-column:7 / span 6; margin-top:12vw; }
-.carnan-gallery img { display:block; width:100%; height:auto; }
+.carnan-gallery img,.carnan-gallery video { display:block; width:100%; height:auto; }
 .marina-covers-post { padding:8vw 2.7vw 10vw; background:#fff; }
 .marina-covers-pair { display:grid; grid-template-columns:1fr 1fr; gap:2vw; align-items:start; margin-top:4vw; }
 .marina-covers-pair figure { margin:0; }
