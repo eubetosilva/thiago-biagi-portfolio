@@ -191,18 +191,14 @@ export default function Home() {
 
       <section className="carnan-feature" aria-labelledby="carnan-title">
         <div className="section-heading"><p id="carnan-title">Carnan + Niemeyer / Runway</p><span>04 Setembro 2026</span></div>
-        <div className="carnan-intro">
-          <h2>Construção<br />coletiva</h2>
-          <p>Styling para uma coleção que parte de Niemeyer e revela do lado de fora aquilo que normalmente só se vê por dentro: construção, acabamento e cuidado.</p>
-        </div>
         <div className="carnan-gallery">
+          <figure className="carnan-thiago"><img src="/portfolio/carnan-niemeyer/00-thiago-biagi.jpg" alt="Thiago Biagi durante o desfile Carnan e Niemeyer" /></figure>
           <figure className="carnan-architecture"><img src="/portfolio/carnan-niemeyer/01-arquitetura.jpg" alt="Desfile Carnan no Caminho Niemeyer" /></figure>
           <figure><img src="/portfolio/carnan-niemeyer/02-passarela.jpg" alt="Looks do desfile Carnan e Niemeyer" /></figure>
           <figure><img src="/portfolio/carnan-niemeyer/03-elenco.jpg" alt="Elenco na passarela do desfile Carnan" loading="lazy" /></figure>
           <figure><img src="/portfolio/carnan-niemeyer/04-look.jpg" alt="Look em camurça no desfile Carnan" loading="lazy" /></figure>
           <figure className="carnan-detail"><img src="/portfolio/carnan-niemeyer/05-detalhe.jpg" alt="Detalhe de styling da coleção Carnan e Niemeyer" loading="lazy" /></figure>
         </div>
-        <div className="carnan-credit"><span>Styling / Thiago Biagi</span><span>Direção criativa / Paulo H. Carneiro</span><span>Direção de projeto / Bruno Fernandes</span></div>
       </section>
 
       <section className="marina-covers-post" aria-labelledby="marina-covers-title">
