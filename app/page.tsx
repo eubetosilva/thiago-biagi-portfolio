@@ -87,7 +87,6 @@ const carnanPreviewImages = [
 ];
 
 const carnanRemainingImages = [
-  ['/portfolio/carnan-niemeyer/22-red-film-still.jpg', 'Frame vermelho do vídeo Carnan + Niemeyer'],
   ['/portfolio/carnan-niemeyer/07-look.jpg', 'Look masculino em movimento no desfile Carnan + Niemeyer'],
   ['/portfolio/carnan-niemeyer/08-runway.jpg', 'Modelos na passarela Carnan + Niemeyer'],
   ['/portfolio/carnan-niemeyer/09-red-jacket.jpg', 'Modelo com jaqueta vermelha no desfile Carnan + Niemeyer'],
@@ -108,6 +107,7 @@ const carnanRemainingImages = [
 ];
 
 const carnanFilms = [
+  '/portfolio/carnan-niemeyer/bts-carnan.mov',
   '/portfolio/carnan-niemeyer/runway-film.mp4',
   '/portfolio/carnan-niemeyer/film-02.mp4',
 ];
@@ -267,6 +267,9 @@ export default function Home() {
             </figure>
           ))}
         </div>
+        <figure className="carnan-feature-film">
+          <video src="/portfolio/carnan-niemeyer/bts-carnan.mov" autoPlay muted loop playsInline controls preload="metadata" aria-label="Vídeo de bastidores Carnan + Niemeyer" />
+        </figure>
       </section>
 
       <section className="marina-covers-post" aria-labelledby="marina-covers-title">
